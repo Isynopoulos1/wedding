@@ -7,12 +7,12 @@ export const sizes = {
   xl: "34px",
   xll: "40px",
   hg: "50px",
-  shg: "100px",
+  shg: "100px"
 };
 
 export const fonts = {
   font1: "Cammron-Regular",
-  font2: " Roboto , sans-serif",
+  font2: " Roboto , sans-serif"
 };
 
 export const margins = {
@@ -20,11 +20,11 @@ export const margins = {
   xs: " 50px",
   sm: "100px",
   md: "200px",
-  lg: "400px",
+  lg: "400px"
 };
 
 export const weights = {
   regular: 400,
   bold: 700,
-  light: 300,
+  light: 300
 };
