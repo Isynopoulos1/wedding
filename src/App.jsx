@@ -1,8 +1,7 @@
 import React from "react";
-import GlobalStyles from "./styles/GlobalStyles";
 
 //IMPORT STYLES TEST
-import { Test } from "./App.styles";
+import { Test, GlobalStyles } from "./App.styles";
 
 const App = () => {
   return (
