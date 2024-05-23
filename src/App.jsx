@@ -1,7 +1,7 @@
 import React from "react";
 
 //IMPORT STYLES TEST
-import { Test, GlobalStyles } from "./App.styles";
+import { GlobalStyles, Test } from "./App.styles";
 
 const App = () => {
   return (
@@ -11,6 +11,7 @@ const App = () => {
         <p className="light">light</p>
         <p className="regular">regular</p>
         <p className="bold">bold</p>
+        <p className="italic">bold</p>
       </Test>
     </>
   );

@@ -1,13 +1,23 @@
 
-import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
+import { defineConfig } from 'vite';
+import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(), viteStaticCopy({
+      targets: [
+        {
+          src: 'src/fonts/*',
+          dest: 'fonts'
+        }
+      ]
+    })
+  ],
   resolve: {
     alias: {
-      '@utils': path.resolve(__dirname, './src/utils')
+      '@utils': path.resolve(__dirname, './src/utils'),
     }
   },
   server: {

@@ -1,19 +1,27 @@
+import { margins, sizes, weights } from "@utils";
 import styled from "styled-components";
-import { sizes, margins, weights } from "@utils";
 
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
 @font-face {
   font-family: 'Cammron';
-  src: url('/fonts/Cammron-Bold.woff2') format('woff2'),
-       url('/fonts/Cammron-Light.woff2') format('woff2'),
-       url('/fonts/Cammron-Regular.woff2') format('woff2'),
-       url('/fonts/Cammron-Round.woff2') format('woff2');
-  font-weight: normal;
+  src: url('./fonts/Cammron-Regular.woff2');
+  font-weight: 400;
   font-style: normal;
 }
-
+@font-face {
+  font-family: 'Cammron';
+  src: url('./fonts/Cammron-Light.woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cammron';
+  src: url('./fonts/Cammron-Bold.woff2');
+  font-weight: 700;
+  font-style: normal;
+}
 
   body {
     font-family: 'Cammron', sans-serif;
@@ -41,5 +49,8 @@ export const Test = styled.div`
   }
   .bold {
     font-weight: ${weights.bold};
+  }
+  .italic {
+    font-style: italic;
   }
 `;

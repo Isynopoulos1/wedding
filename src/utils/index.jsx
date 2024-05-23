@@ -24,7 +24,7 @@ export const margins = {
 };
 
 export const weights = {
-  regular: 500,
+  regular: 400,
   bold: 700,
-  light: 100,
+  light: 300,
 };
