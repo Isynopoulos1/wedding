@@ -86,4 +86,4 @@ Error generating stack: `+o.message+`
   .italic {
     font-style: italic;
   }
-`,Mm=()=>Qe.jsxs(Qe.Fragment,{children:[Qe.jsx(Dm,{}),Qe.jsxs(jm,{children:[Qe.jsx("p",{className:"light",children:"light"}),Qe.jsx("p",{className:"regular",children:"regular"}),Qe.jsx("p",{className:"bold",children:"bold"}),Qe.jsx("p",{className:"italic",children:"bold"}),Qe.jsx("p",{children:"WORK PLEASE"})]})]});Xo.createRoot(document.getElementById("root")).render(Qe.jsx(Mm,{}));
+`,Mm=()=>Qe.jsxs(Qe.Fragment,{children:[Qe.jsx(Dm,{}),Qe.jsxs(jm,{children:[Qe.jsx("p",{className:"light",children:"light"}),Qe.jsx("p",{className:"regular",children:"regular"}),Qe.jsx("p",{className:"bold",children:"bold"}),Qe.jsx("p",{className:"italic",children:"bold"}),Qe.jsx("p",{children:"WORK PLEASE 2"})]})]});Xo.createRoot(document.getElementById("root")).render(Qe.jsx(Mm,{}));
