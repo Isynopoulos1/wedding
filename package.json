@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://Isynopoulos1.github.io/wedding",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
