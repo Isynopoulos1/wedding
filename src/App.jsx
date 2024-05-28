@@ -12,7 +12,7 @@ const App = () => {
         <p className="regular">regular</p>
         <p className="bold">bold</p>
         <p className="italic">bold</p>
-        <p>WORK PLEASE</p>
+        <p>WORK PLEASE 2</p>
       </Test>
     </>
   );
