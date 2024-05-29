@@ -3,10 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://www.isela-erwan.com",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "echo 'www.isela-erwan.com' > ./dist/CNAME && gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -19,6 +22,7 @@
     "@types/react-dom": "18.2.22",
     "@vitejs/plugin-react": "4.3.0",
     "@vitejs/plugin-react-swc": "3.5.0",
+    "gh-pages": "4.0.0",
     "vite": "5.2.0",
     "vite-plugin-static-copy": "1.0.5"
   }
