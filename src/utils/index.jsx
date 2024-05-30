@@ -4,10 +4,10 @@ export const sizes = {
   sm: "14px",
   md: "20px",
   lg: "25px",
-  xl: "34px",
+  xl: "32px",
   xll: "40px",
-  hg: "50px",
-  shg: "100px"
+  hg: "55px",
+  xhg: "96px"
 };
 
 export const fonts = {
