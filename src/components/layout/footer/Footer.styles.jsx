@@ -22,4 +22,6 @@ export const Copyright = styled.div`
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: ${sizes.xxs};
+  margin-top: ${margins.xss};
+  margin-bottom: ${margins.xss};
 `;

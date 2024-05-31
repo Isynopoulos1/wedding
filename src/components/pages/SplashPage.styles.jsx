@@ -13,8 +13,8 @@ export const StyledSplashPage = styled.div`
   flex-direction: column;
 
   .title {
-    font-size: ${sizes.xhg};
-    margin-bottom: ${margins.xss};
+    font-size: ${sizes.xxhg};
+
     text-align: center;
   }
 
@@ -22,12 +22,18 @@ export const StyledSplashPage = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
-    font-size: ${sizes.xl};
+    font-size: ${sizes.xll};
     font-weight: ${weights.light};
     text-align: center;
   }
   .container-info p {
     margin: 0;
+  }
+  .line {
+    width: 80%;
+    height: 1px;
+    background-color: black;
+    margin: ${margins.sm} 0;
   }
   @media only screen and (max-width: 700px) {
     .title {
