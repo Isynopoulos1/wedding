@@ -9,6 +9,7 @@ const SplashPage = () => {
     <StyledSplashPage>
       <div className="line"></div>
       <LogoDesktop />
+
       <div className="title">Coming soon!</div>
       <div className="container-info">
         <p>Our wedding site is nearly ready. Stay tuned for updates!</p>

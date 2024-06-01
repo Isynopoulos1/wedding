@@ -4,7 +4,7 @@ import { sizes } from "@utils";
 export const StyledLogo = styled.svg`
   display: flex;
   cursor: pointer;
-  width: ${sizes.mega};
+  width: ${sizes.xxxl};
   margin: 0;
 
   @media only screen and (max-width: 700px) {

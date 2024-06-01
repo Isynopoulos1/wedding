@@ -11,10 +11,10 @@ export const StyledSplashPage = styled.div`
   margin: 0;
   min-height: 100vh;
   flex-direction: column;
+  gap: ${margins.xss};
 
   .title {
-    font-size: ${sizes.xxhg};
-
+    font-size: ${sizes.xhg};
     text-align: center;
   }
 
@@ -22,7 +22,7 @@ export const StyledSplashPage = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
-    font-size: ${sizes.xll};
+    font-size: ${sizes.xl};
     font-weight: ${weights.light};
     text-align: center;
   }

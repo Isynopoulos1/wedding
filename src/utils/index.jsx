@@ -9,7 +9,7 @@ export const sizes = {
   hg: "55px",
   xhg: "96px",
   xxhg: "100px",
-  xxxl: "200px",
+  xxxl: "250px",
   xxxxl: "350px",
   mega: "800px"
 };
