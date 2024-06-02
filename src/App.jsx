@@ -1,19 +1,19 @@
 import React from "react";
 
-//IMPORT STYLES TEST
-import { GlobalStyles, Test } from "./App.styles";
+//IMPORT STYLES 
+import { GlobalStyles } from "./App.styles";
+import SplashPage from "./components/pages/SplashPage";
+//TODO: IMPORT COMPONENTS
+import Footer from "./components/layout/footer/Footer";
+
+//TODO: IMPORT RESET CSS
 
 const App = () => {
   return (
     <>
       <GlobalStyles />
-      <Test>
-        <p className="light">light</p>
-        <p className="regular">regular</p>
-        <p className="bold">bold</p>
-        <p className="italic">bold</p>
-        <p>WORK PLEASE 3</p>
-      </Test>
+      <SplashPage />
+      <Footer/>
     </>
   );
 };
