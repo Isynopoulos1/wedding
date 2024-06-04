@@ -4,10 +4,10 @@ import { sizes } from "@utils";
 export const StyledLogo = styled.svg`
   display: flex;
   cursor: pointer;
-  width: ${sizes.xxxl};
+  width: ${sizes.hg};
   margin: 0;
 
   @media only screen and (max-width: 700px) {
-    width: ${sizes.xxxl};
+    width: ${sizes.xll};
   }
 `;

@@ -9,6 +9,7 @@ export const FooterContainer = styled.footer`
   align-items: center;
   width: calc(100% - 2 * ${margins.xss});
   height: ${margins.xs};
+
   @media only screen and (max-width: 700px) {
     position: fixed;
     bottom: 0;
