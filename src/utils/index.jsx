@@ -1,4 +1,12 @@
-export { sizes, fonts, margins, weights } from "./constants";
+export {
+  sizes,
+  fonts,
+  spaces,
+  weights,
+  zindex,
+  contentW,
+  colors,
+} from "./constants";
 
 //TODO: IMPORT RENDER TO STATIC MARKUP
 import EN from "@assets/translations/en.translations.json";
