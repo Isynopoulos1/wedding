@@ -6,6 +6,7 @@ export const StyledLink = styled.a`
   text-decoration: none;
   padding: 10px 15px;
   transition: background-color 0.3s ease;
+  cursor: pointer;
 
   &:hover {
     color: ${colors.silver};

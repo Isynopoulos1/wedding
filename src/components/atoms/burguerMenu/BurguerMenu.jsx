@@ -2,14 +2,14 @@ import React from "react";
 import { Cross as Burger } from "hamburger-react";
 //TODO: IMPORT PROPTYPES
 
-import { MenuWrapper } from "./Menu.styles";
+import { MenuWrapper } from "./BurguerMenu.styles";
 
-const Menu = () => {
+const BurguerMenu = ({ onClick }) => {
   return (
-    <MenuWrapper>
+    <MenuWrapper onClick={onClick}>
       <Burger />
     </MenuWrapper>
   );
 };
 
-export default Menu;
+export default BurguerMenu;

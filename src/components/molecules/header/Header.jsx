@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-//TODO: IMPORT USESTATE
+
 //TODO: IMPORT LINK FROM ROUTER DOM
 
 //IMPORT COMPONENTS
 import Logo from "@atoms/logo/desktop/DesktopLogo";
 import Link from "@atoms/link/Link";
-import Menu from "@atoms/menu/Menu";
+import BurguerMenu from "@atoms/burguerMenu/BurguerMenu";
 
 //TODO: IMPORT STYLES
 import {
@@ -14,6 +14,9 @@ import {
   HeaderLeftContainer,
   HeaderContainerRight,
   Line,
+  Nav,
+  LanguagesNav,
+  MobileMenuContainer,
 } from "./Header.styles";
 
 // IMPORT ASSETS
@@ -22,7 +25,9 @@ import { languages } from "@utils";
 const Header = () => {
   // HOOKS
   const [isMobile, setIsMobile] = useState(false);
+  const [toggle, setToggle] = useState(false);
 
+  // LIFECYCLES
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 700);
@@ -35,13 +40,16 @@ const Header = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  // LIFECYCLES
+
   // HANDLE FUNCTIONS
   const handleTranslation = link => {
     alert(link);
   };
   const handleLink = link => {
     alert(link);
+  };
+  const handleToggle = () => {
+    return setToggle(!toggle);
   };
 
   // DATA
@@ -52,6 +60,31 @@ const Header = () => {
   ];
 
   // RENDER FUNCTIONS
+  const renderLinks = () => {
+    return (
+      <Nav>
+        {links.map(link => (
+          <Link label={link.label} onClick={() => handleLink(link.href)} />
+        ))}
+      </Nav>
+    );
+  };
+  const renderLanguages = () => {
+    return (
+      <LanguagesNav>
+        {languages.map((language, index) => (
+          <>
+            <Link
+              key={language.name}
+              label={language.name}
+              onClick={() => handleTranslation("TODO LANGUAGE LOGIC")}
+            />
+            {index < languages.length - 1 && <Line />}
+          </>
+        ))}
+      </LanguagesNav>
+    );
+  };
 
   // MAIN RENDER
   return (
@@ -59,30 +92,19 @@ const Header = () => {
       <HeaderContainer>
         <HeaderLeftContainer>
           <Logo />
-          <nav>
-            {links.map(link => (
-              <Link label={link.label} onClick={() => handleLink(link.href)} />
-            ))}
-          </nav>
+          {!isMobile && renderLinks()}
         </HeaderLeftContainer>
         {!isMobile && (
-          <HeaderContainerRight>
-            <nav>
-              {languages.map((language, index) => (
-                <>
-                  <Link
-                    key={language.name}
-                    label={language.name}
-                    onClick={() => handleTranslation("TODO LANGUAGE LOGIC")}
-                  />
-                  {index < languages.length - 1 && <Line />}
-                </>
-              ))}
-            </nav>
-          </HeaderContainerRight>
+          <HeaderContainerRight>{renderLanguages()}</HeaderContainerRight>
         )}
+        {isMobile && <BurguerMenu onClick={handleToggle} />}
       </HeaderContainer>
-      {isMobile && <Menu />}
+      {isMobile && toggle && (
+        <MobileMenuContainer>
+          {renderLinks()}
+          {renderLanguages()}
+        </MobileMenuContainer>
+      )}
     </HeaderWrapper>
   );
 };
