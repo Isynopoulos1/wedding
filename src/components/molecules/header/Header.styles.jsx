@@ -54,6 +54,7 @@ export const HeaderLeftContainer = styled.div`
 export const HeaderContainerRight = styled.div`
   position: relative;
   display: flex;
+  gap: ${sizes.xl};
   nav {
     display: flex;
   }

@@ -43,7 +43,7 @@ export const zindex = {
 
 export const contentW = {
   mobile: "600px",
-  tablet: "700px",
+  tablet: "900px",
   desktop: "1500px",
 };
 export const modalW = {
@@ -59,7 +59,7 @@ export const formW = {
 };
 
 export const colors = {
-  silver: "#afadad",
+  silver: "#cccbcb",
   black: "#000000",
   white: "#ffffff",
 };

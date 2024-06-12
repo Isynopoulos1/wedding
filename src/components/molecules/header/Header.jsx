@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-
+import { contentW } from "@utils";
 //TODO: IMPORT LINK FROM ROUTER DOM
 
 //IMPORT COMPONENTS
 import Logo from "@atoms/logo/desktop/DesktopLogo";
 import Link from "@atoms/link/Link";
 import BurguerMenu from "@atoms/burguerMenu/BurguerMenu";
+import ConfirmBtn from "@atoms/confirmBtn/ConfirmBtn";
 
 //TODO: IMPORT STYLES
 import {
@@ -30,7 +31,7 @@ const Header = () => {
   // LIFECYCLES
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 700);
+      setIsMobile(window.innerWidth <= parseInt(contentW.tablet, 10));
     };
 
     handleResize();
@@ -95,9 +96,12 @@ const Header = () => {
           {!isMobile && renderLinks()}
         </HeaderLeftContainer>
         {!isMobile && (
-          <HeaderContainerRight>{renderLanguages()}</HeaderContainerRight>
+          <HeaderContainerRight>
+            {renderLanguages()}
+            <ConfirmBtn />
+          </HeaderContainerRight>
         )}
-        {isMobile && <BurguerMenu onClick={handleToggle} />}
+        {isMobile && <BurguerMenu onClick={handleToggle} active={toggle} />}
       </HeaderContainer>
       {isMobile && toggle && (
         <MobileMenuContainer>
