@@ -1,13 +1,14 @@
 import styled from "styled-components";
-import { sizes } from "@utils";
+import { sizes, zindex } from "@utils";
 
 export const StyledLogo = styled.svg`
   display: flex;
   cursor: pointer;
-  width: ${sizes.xxxl};
+  width: ${sizes.hg};
   margin: 0;
+  z-index: ${zindex.header};
 
   @media only screen and (max-width: 700px) {
-    width: ${sizes.xxxl};
+    width: ${sizes.xll};
   }
 `;

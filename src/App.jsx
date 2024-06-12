@@ -1,10 +1,11 @@
 import React from "react";
 
-//IMPORT STYLES 
+//IMPORT STYLES
 import { GlobalStyles } from "./App.styles";
-import SplashPage from "./components/pages/SplashPage";
+
 //TODO: IMPORT COMPONENTS
-import Footer from "./components/layout/footer/Footer";
+import Footer from "@molecules/footer/Footer";
+import Header from "@molecules/header/Header";
 
 //TODO: IMPORT RESET CSS
 
@@ -12,8 +13,9 @@ const App = () => {
   return (
     <>
       <GlobalStyles />
-      <SplashPage />
-      <Footer/>
+      <Header />
+      <div style={{ margin: "35rem 0" }}>CONTENT TO DO</div>
+      <Footer />
     </>
   );
 };
