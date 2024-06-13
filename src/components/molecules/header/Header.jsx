@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { contentW } from "@utils";
-//TODO: IMPORT LINK FROM ROUTER DOM
 
 //IMPORT COMPONENTS
 import Logo from "@atoms/logo/desktop/DesktopLogo";
@@ -23,7 +22,7 @@ import {
 // IMPORT ASSETS
 import { languages } from "@utils";
 
-const Header = () => {
+const Header = ({ onConfirmClick }) => {
   // HOOKS
   const [isMobile, setIsMobile] = useState(false);
   const [toggle, setToggle] = useState(false);
@@ -46,9 +45,18 @@ const Header = () => {
   const handleTranslation = link => {
     alert(link);
   };
+
   const handleLink = link => {
-    alert(link);
+    const section = document.getElementById(link);
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "end",
+      });
+    }
   };
+
   const handleToggle = () => {
     return setToggle(!toggle);
   };
@@ -65,7 +73,11 @@ const Header = () => {
     return (
       <Nav>
         {links.map(link => (
-          <Link label={link.label} onClick={() => handleLink(link.href)} />
+          <Link
+            key={link.label}
+            label={link.label}
+            onClick={() => handleLink(link.href)}
+          />
         ))}
       </Nav>
     );
@@ -98,7 +110,7 @@ const Header = () => {
         {!isMobile && (
           <HeaderContainerRight>
             {renderLanguages()}
-            <ConfirmBtn />
+            <ConfirmBtn onClick={onConfirmClick} />
           </HeaderContainerRight>
         )}
         {isMobile && <BurguerMenu onClick={handleToggle} active={toggle} />}

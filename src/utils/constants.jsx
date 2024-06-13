@@ -11,6 +11,7 @@ export const sizes = {
   xxhg: "100px",
   xxxl: "250px",
   xxxxl: "350px",
+  super: "550px",
   mega: "800px",
 };
 
@@ -25,7 +26,9 @@ export const spaces = {
   ssm: " 64px",
   sm: "100px",
   md: "200px",
-  lg: "400px",
+  lg: "300px",
+  xl: "400px",
+  xxl: "550",
 };
 
 export const weights = {
