@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 //IMPORT STYLES
 import { GlobalStyles } from "./App.styles";
@@ -17,13 +17,15 @@ import How from "@atoms/how/How";
 const App = () => {
   //HOOKS
   const [isConfirmed, setConfirmed] = useState(false);
+
   //TODO ADD MODAL HOOKS
 
   //LIFECYCLES
 
   //HANDLE FUNCTIONS
-  const handleConfirmed = confirmed => {
-    return setConfirmed(!confirmed);
+  const handleConfirmed = () => {
+    console.log("Link clicked. Triggering Confirm button.");
+    return setConfirmed(!isConfirmed);
   };
 
   return (
@@ -31,7 +33,7 @@ const App = () => {
       <GlobalStyles />
       <Header active={isConfirmed} />
       <section id="when" style={{ margin: "35rem 0" }}>
-        <When />
+        <When onConfirmClick={handleConfirmed} />
       </section>
       <section id="where" style={{ margin: "35rem 0" }}>
         <Where />

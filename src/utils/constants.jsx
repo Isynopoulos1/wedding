@@ -2,6 +2,7 @@ export const sizes = {
   xss: "10px",
   xs: "12px",
   sm: "14px",
+  ssm: "16px",
   md: "20px",
   lg: "25px",
   xl: "32px",
@@ -11,7 +12,7 @@ export const sizes = {
   xxhg: "100px",
   xxxl: "250px",
   xxxxl: "350px",
-  super: "550px",
+  super: "500px",
   mega: "800px",
 };
 

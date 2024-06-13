@@ -6,9 +6,9 @@ export const StyledLogo = styled.svg`
   cursor: pointer;
   width: ${sizes.super};
   margin: 0;
-  z-index: ${zindex.header};
+  z-index: ${zindex.base};
 
   @media only screen and (max-width: 700px) {
-    width: ${sizes.xll};
+    width: ${sizes.xxxxl};
   }
 `;

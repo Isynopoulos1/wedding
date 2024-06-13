@@ -92,7 +92,7 @@ const Header = ({ onConfirmClick }) => {
               label={language.name}
               onClick={() => handleTranslation("TODO LANGUAGE LOGIC")}
             />
-            {index < languages.length - 1 && <Line />}
+            {index < languages.length - 1 && <Line key={`line_${index}`} />}
           </>
         ))}
       </LanguagesNav>

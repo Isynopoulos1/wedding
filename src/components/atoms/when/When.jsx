@@ -5,11 +5,15 @@ import { HeroContainer, InfoContainer } from "./When.styles";
 //IMPORT COMPONENTS
 import Logo from "@atoms/logo/mobile/MobileLogo";
 
-export const When = () => {
+export const When = ({ onConfirmClick }) => {
+  const handleClick = () => {
+    console.log("Link clicked. Triggering Confirm button.");
+    onConfirmClick();
+  };
   return (
     <>
       <HeroContainer>
-        <p>Celebrate our wedding!</p>
+        <p className="greetings">Celebrate our wedding!</p>
         <div className="line"></div>
         <Logo />
         <div className="line"></div>
@@ -25,7 +29,7 @@ export const When = () => {
           at Castell de Tous in Barcelona. <br />
           Your presence and support on this very special day mean a lot to us.
         </p>
-        <a href="" target="_blank">
+        <a href="#" onClick={handleClick}>
           Confirm Attendance
         </a>
       </InfoContainer>

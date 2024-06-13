@@ -74,7 +74,6 @@ export const MobileMenuContainer = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  gap: ${spaces.xl};
   right: 0;
   z-index: ${zindex.base};
   width: 100%;
