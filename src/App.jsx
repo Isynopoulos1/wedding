@@ -15,19 +15,32 @@ import How from "@atoms/how/How";
 const App = () => {
   //HOOKS
   const [isConfirmed, setConfirmed] = useState(false);
+  const [isModalOpen, setModalOpen] = useState(false);
 
   //HANDLE FUNCTIONS
   const handleConfirmed = () => {
     console.log("Link clicked. Triggering Confirm button.");
     return setConfirmed(!isConfirmed);
   };
+  const handleModalOpen = () => {
+    setModalOpen(true);
+  };
+
+  const handleModalClose = () => {
+    setModalOpen(false);
+  };
 
   return (
     <>
       <GlobalStyles />
-      <Header onConfirmClick={handleConfirmed} />
+      <Header
+        onConfirmClick={handleConfirmed}
+        isModalOpen={isModalOpen}
+        onModalOpen={handleModalOpen}
+        onModalClose={handleModalClose}
+      />
       <section id="when" style={{ margin: "35rem 0" }}>
-        <When onConfirmClick={handleConfirmed} />
+        <When onConfirmClick={handleConfirmed} onModalOpen={handleModalOpen} />
       </section>
       <section id="where" style={{ margin: "35rem 0" }}>
         <Where />

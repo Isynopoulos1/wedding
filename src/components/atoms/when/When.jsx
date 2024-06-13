@@ -5,10 +5,14 @@ import { HeroContainer, InfoContainer } from "./When.styles";
 //IMPORT COMPONENTS
 import Logo from "@atoms/logo/mobile/MobileLogo";
 
-export const When = ({ onConfirmClick }) => {
+export const When = ({ onConfirmClick, onModalOpen }) => {
   const handleClick = () => {
-    console.log("Link clicked. Triggering Confirm button.");
-    onConfirmClick();
+    if (typeof onConfirmClick === "function") {
+      onConfirmClick();
+    }
+    if (typeof onModalOpen === "function") {
+      onModalOpen();
+    }
   };
   return (
     <>

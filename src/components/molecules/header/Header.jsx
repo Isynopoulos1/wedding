@@ -23,11 +23,10 @@ import {
 //IMPORT ASSETS
 import { languages } from "@utils";
 
-const Header = ({ onConfirmClick }) => {
+const Header = ({ onConfirmClick, onModalOpen, isModalOpen, onModalClose }) => {
   //HOOKS
   const [isMobile, setIsMobile] = useState(false);
   const [toggle, setToggle] = useState(false);
-  const [modalOpen, setModalOpen] = useState(false);
 
   //LIFECYCLES
   useEffect(() => {
@@ -61,14 +60,6 @@ const Header = ({ onConfirmClick }) => {
 
   const handleToggle = () => {
     setToggle(!toggle);
-  };
-
-  const handleModalOpen = () => {
-    setModalOpen(true);
-  };
-
-  const handleModalClose = () => {
-    setModalOpen(false);
   };
 
   //DATA
@@ -120,10 +111,7 @@ const Header = ({ onConfirmClick }) => {
         {!isMobile && (
           <HeaderContainerRight>
             {renderLanguages()}
-            <ConfirmBtn
-              onClick={onConfirmClick}
-              onModalOpen={handleModalOpen}
-            />
+            <ConfirmBtn onClick={onConfirmClick} onModalOpen={onModalOpen} />
           </HeaderContainerRight>
         )}
         {isMobile && <BurguerMenu onClick={handleToggle} active={toggle} />}
@@ -134,7 +122,7 @@ const Header = ({ onConfirmClick }) => {
           {renderLanguages()}
         </MobileMenuContainer>
       )}
-      {modalOpen && <Modal onClose={handleModalClose} />}
+      {isModalOpen && <Modal onClose={onModalClose} />}
     </HeaderWrapper>
   );
 };
