@@ -6,8 +6,9 @@ import Logo from "@atoms/logo/desktop/DesktopLogo";
 import Link from "@atoms/link/Link";
 import BurguerMenu from "@atoms/burguerMenu/BurguerMenu";
 import ConfirmBtn from "@atoms/confirmBtn/ConfirmBtn";
+import Modal from "@organisms/modal/Modal";
 
-//TODO: IMPORT STYLES
+//IMPORT STYLES
 import {
   HeaderWrapper,
   HeaderContainer,
@@ -19,15 +20,16 @@ import {
   MobileMenuContainer,
 } from "./Header.styles";
 
-// IMPORT ASSETS
+//IMPORT ASSETS
 import { languages } from "@utils";
 
 const Header = ({ onConfirmClick }) => {
-  // HOOKS
+  //HOOKS
   const [isMobile, setIsMobile] = useState(false);
   const [toggle, setToggle] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
-  // LIFECYCLES
+  //LIFECYCLES
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= parseInt(contentW.tablet, 10));
@@ -41,7 +43,7 @@ const Header = ({ onConfirmClick }) => {
     };
   }, []);
 
-  // HANDLE FUNCTIONS
+  //HANDLE FUNCTIONS
   const handleTranslation = link => {
     alert(link);
   };
@@ -58,17 +60,25 @@ const Header = ({ onConfirmClick }) => {
   };
 
   const handleToggle = () => {
-    return setToggle(!toggle);
+    setToggle(!toggle);
   };
 
-  // DATA
+  const handleModalOpen = () => {
+    setModalOpen(true);
+  };
+
+  const handleModalClose = () => {
+    setModalOpen(false);
+  };
+
+  //DATA
   const links = [
     { label: "When", href: "when" },
     { label: "Where", href: "where" },
     { label: "How", href: "how" },
   ];
 
-  // RENDER FUNCTIONS
+  //RENDER FUNCTIONS
   const renderLinks = () => {
     return (
       <Nav>
@@ -82,24 +92,24 @@ const Header = ({ onConfirmClick }) => {
       </Nav>
     );
   };
+
   const renderLanguages = () => {
     return (
       <LanguagesNav>
         {languages.map((language, index) => (
-          <>
+          <React.Fragment key={language.name}>
             <Link
-              key={language.name}
               label={language.name}
               onClick={() => handleTranslation("TODO LANGUAGE LOGIC")}
             />
-            {index < languages.length - 1 && <Line key={`line_${index}`} />}
-          </>
+            {index < languages.length - 1 && <Line />}
+          </React.Fragment>
         ))}
       </LanguagesNav>
     );
   };
 
-  // MAIN RENDER
+  //MAIN RENDER
   return (
     <HeaderWrapper>
       <HeaderContainer>
@@ -110,7 +120,10 @@ const Header = ({ onConfirmClick }) => {
         {!isMobile && (
           <HeaderContainerRight>
             {renderLanguages()}
-            <ConfirmBtn onClick={onConfirmClick} />
+            <ConfirmBtn
+              onClick={onConfirmClick}
+              onModalOpen={handleModalOpen}
+            />
           </HeaderContainerRight>
         )}
         {isMobile && <BurguerMenu onClick={handleToggle} active={toggle} />}
@@ -121,6 +134,7 @@ const Header = ({ onConfirmClick }) => {
           {renderLanguages()}
         </MobileMenuContainer>
       )}
+      {modalOpen && <Modal onClose={handleModalClose} />}
     </HeaderWrapper>
   );
 };

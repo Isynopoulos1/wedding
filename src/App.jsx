@@ -1,26 +1,20 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 
 //IMPORT STYLES
 import { GlobalStyles } from "./App.styles";
-import { spaces } from "@utils";
 
-//TODO: IMPORT COMPONENTS
+//IMPORT COMPONENTS
 import Footer from "@molecules/footer/Footer";
 import Header from "@molecules/header/Header";
 import When from "@atoms/when/When";
 import Where from "@atoms/where/Where";
 import How from "@atoms/how/How";
-//TODO IMPORT MODAL
 
 //TODO: IMPORT RESET CSS
 
 const App = () => {
   //HOOKS
   const [isConfirmed, setConfirmed] = useState(false);
-
-  //TODO ADD MODAL HOOKS
-
-  //LIFECYCLES
 
   //HANDLE FUNCTIONS
   const handleConfirmed = () => {
@@ -31,7 +25,7 @@ const App = () => {
   return (
     <>
       <GlobalStyles />
-      <Header active={isConfirmed} />
+      <Header onConfirmClick={handleConfirmed} />
       <section id="when" style={{ margin: "35rem 0" }}>
         <When onConfirmClick={handleConfirmed} />
       </section>
@@ -41,7 +35,6 @@ const App = () => {
       <section id="how" style={{ margin: "35rem 0" }}>
         <How />
       </section>
-
       <Footer />
     </>
   );
