@@ -2,15 +2,18 @@ export const sizes = {
   xss: "10px",
   xs: "12px",
   sm: "14px",
+  ssm: "16px",
   md: "20px",
-  lg: "25px",
+  lg: "24px",
   xl: "32px",
   xll: "40px",
+  xxll: "45px",
   hg: "55px",
   xhg: "96px",
   xxhg: "100px",
   xxxl: "250px",
   xxxxl: "350px",
+  super: "500px",
   mega: "800px",
 };
 
@@ -25,7 +28,9 @@ export const spaces = {
   ssm: " 64px",
   sm: "100px",
   md: "200px",
-  lg: "400px",
+  lg: "300px",
+  xl: "400px",
+  xxl: "560",
 };
 
 export const weights = {
@@ -43,7 +48,7 @@ export const zindex = {
 
 export const contentW = {
   mobile: "600px",
-  tablet: "700px",
+  tablet: "900px",
   desktop: "1500px",
 };
 export const modalW = {
@@ -59,7 +64,7 @@ export const formW = {
 };
 
 export const colors = {
-  silver: "#afadad",
+  silver: "#cccbcb",
   black: "#000000",
   white: "#ffffff",
 };

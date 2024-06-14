@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-
-//TODO: IMPORT LINK FROM ROUTER DOM
+import { contentW } from "@utils";
 
 //IMPORT COMPONENTS
 import Logo from "@atoms/logo/desktop/DesktopLogo";
 import Link from "@atoms/link/Link";
 import BurguerMenu from "@atoms/burguerMenu/BurguerMenu";
+import ConfirmBtn from "@atoms/confirmBtn/ConfirmBtn";
 
-//TODO: IMPORT STYLES
+//IMPORT STYLES
 import {
   HeaderWrapper,
   HeaderContainer,
@@ -19,18 +19,18 @@ import {
   MobileMenuContainer,
 } from "./Header.styles";
 
-// IMPORT ASSETS
+//IMPORT ASSETS
 import { languages } from "@utils";
 
-const Header = () => {
-  // HOOKS
+const Header = ({ toggleModal }) => {
+  //HOOKS
   const [isMobile, setIsMobile] = useState(false);
   const [toggle, setToggle] = useState(false);
 
-  // LIFECYCLES
+  //LIFECYCLES
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 700);
+      setIsMobile(window.innerWidth <= parseInt(contentW.tablet, 10));
     };
 
     handleResize();
@@ -41,52 +41,66 @@ const Header = () => {
     };
   }, []);
 
-  // HANDLE FUNCTIONS
+  //HANDLE FUNCTIONS
   const handleTranslation = link => {
     alert(link);
   };
+
   const handleLink = link => {
-    alert(link);
-  };
-  const handleToggle = () => {
-    return setToggle(!toggle);
+    setToggle();
+    const section = document.getElementById(link);
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start", //center
+        inline: "end", //end
+      });
+    }
   };
 
-  // DATA
+  const handleToggle = () => {
+    setToggle(!toggle);
+  };
+
+  //DATA
   const links = [
     { label: "When", href: "when" },
     { label: "Where", href: "where" },
     { label: "How", href: "how" },
   ];
 
-  // RENDER FUNCTIONS
+  //RENDER FUNCTIONS
   const renderLinks = () => {
     return (
       <Nav>
         {links.map(link => (
-          <Link label={link.label} onClick={() => handleLink(link.href)} />
+          <Link
+            key={link.label}
+            label={link.label}
+            onClick={() => handleLink(link.href)}
+          />
         ))}
       </Nav>
     );
   };
+
   const renderLanguages = () => {
     return (
       <LanguagesNav>
         {languages.map((language, index) => (
-          <>
+          <React.Fragment key={language.name}>
             <Link
-              key={language.name}
               label={language.name}
               onClick={() => handleTranslation("TODO LANGUAGE LOGIC")}
             />
             {index < languages.length - 1 && <Line />}
-          </>
+          </React.Fragment>
         ))}
       </LanguagesNav>
     );
   };
 
-  // MAIN RENDER
+  //MAIN RENDER
   return (
     <HeaderWrapper>
       <HeaderContainer>
@@ -95,13 +109,17 @@ const Header = () => {
           {!isMobile && renderLinks()}
         </HeaderLeftContainer>
         {!isMobile && (
-          <HeaderContainerRight>{renderLanguages()}</HeaderContainerRight>
+          <HeaderContainerRight>
+            {renderLanguages()}
+            <ConfirmBtn onClick={toggleModal} />
+          </HeaderContainerRight>
         )}
-        {isMobile && <BurguerMenu onClick={handleToggle} />}
+        {isMobile && <BurguerMenu onClick={handleToggle} active={toggle} />}
       </HeaderContainer>
       {isMobile && toggle && (
         <MobileMenuContainer>
           {renderLinks()}
+          <ConfirmBtn onClick={toggleModal} />
           {renderLanguages()}
         </MobileMenuContainer>
       )}

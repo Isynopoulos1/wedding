@@ -1,20 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 
 //IMPORT STYLES
 import { GlobalStyles } from "./App.styles";
 
-//TODO: IMPORT COMPONENTS
+//IMPORT COMPONENTS
 import Footer from "@molecules/footer/Footer";
 import Header from "@molecules/header/Header";
-
-//TODO: IMPORT RESET CSS
+import When from "@atoms/when/When";
+import Where from "@atoms/where/Where";
+import How from "@atoms/how/How";
+import Modal from "@organisms/modal/Modal";
 
 const App = () => {
+  //HOOKS
+
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  //HANDLE FUNCTIONS
+  const handleModal = () => {
+    return setModalOpen(!isModalOpen);
+  };
+
   return (
     <>
       <GlobalStyles />
-      <Header />
-      <div style={{ margin: "35rem 0" }}>CONTENT TO DO</div>
+      {isModalOpen && <Modal onClose={handleModal} />}
+      <Header toggleModal={handleModal} />
+      <When onModalOpen={handleModal} />
+      <Where />
+      <How />
+
       <Footer />
     </>
   );

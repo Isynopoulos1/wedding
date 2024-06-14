@@ -28,7 +28,6 @@ export const HeaderContainer = styled.div`
 
 export const Nav = styled.nav`
   display: flex;
-  gap: ${spaces.xs};
   @media only screen and (max-width: ${contentW.tablet}) {
     flex-direction: column;
     font-size: ${sizes.hg};
@@ -54,6 +53,7 @@ export const HeaderLeftContainer = styled.div`
 export const HeaderContainerRight = styled.div`
   position: relative;
   display: flex;
+  gap: ${sizes.xl};
   nav {
     display: flex;
   }
@@ -73,7 +73,6 @@ export const MobileMenuContainer = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  gap: ${spaces.xl};
   right: 0;
   z-index: ${zindex.base};
   width: 100%;
