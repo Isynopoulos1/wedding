@@ -12,12 +12,12 @@ export const HeroContainer = styled.div`
   flex-direction: column;
 
   .greetings {
-    font-size: ${sizes.xll};
+    font-size: ${sizes.xxll};
     text-align: center;
     padding-top: ${spaces.md};
     @media only screen and (max-width: ${contentW.mobile}) {
       font-size: ${sizes.xl};
-      padding: 0 ${sizes.hg};
+      padding-top: ${spaces.sm};
     }
   }
   .line {

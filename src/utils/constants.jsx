@@ -7,6 +7,7 @@ export const sizes = {
   lg: "24px",
   xl: "32px",
   xll: "40px",
+  xxll: "45px",
   hg: "55px",
   xhg: "96px",
   xxhg: "100px",
