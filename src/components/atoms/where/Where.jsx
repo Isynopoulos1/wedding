@@ -1,7 +1,8 @@
 import React from "react";
+import { MainContainer } from "./Where.styles";
 
 const Where = () => {
-  return <div>WHERE</div>;
+  return <MainContainer id="where">WHERE</MainContainer>;
 };
 
 export default Where;

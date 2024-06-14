@@ -1,7 +1,7 @@
 import React from "react";
 //IMPORT STYLES
 
-import { HeroContainer, InfoContainer } from "./When.styles";
+import { HeroContainer, InfoContainer, MainContainer } from "./When.styles";
 //IMPORT COMPONENTS
 import Logo from "@atoms/logo/mobile/MobileLogo";
 
@@ -15,7 +15,7 @@ export const When = ({ onConfirmClick, onModalOpen }) => {
     }
   };
   return (
-    <>
+    <MainContainer id="when">
       <HeroContainer>
         <p className="greetings">Celebrate our wedding!</p>
         <div className="line"></div>
@@ -33,11 +33,11 @@ export const When = ({ onConfirmClick, onModalOpen }) => {
           at Castell de Tous in Barcelona. <br />
           Your presence and support on this very special day mean a lot to us.
         </p>
-        <a href="#" onClick={handleClick}>
+        <a href="#" onClick={onModalOpen}>
           Confirm Attendance
         </a>
       </InfoContainer>
-    </>
+    </MainContainer>
   );
 };
 

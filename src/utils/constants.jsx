@@ -29,7 +29,7 @@ export const spaces = {
   md: "200px",
   lg: "300px",
   xl: "400px",
-  xxl: "550",
+  xxl: "560",
 };
 
 export const weights = {

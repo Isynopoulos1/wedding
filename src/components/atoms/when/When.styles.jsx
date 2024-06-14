@@ -1,5 +1,9 @@
 import styled from "styled-components";
-import { zindex, spaces, contentW, sizes, colors } from "@utils";
+import { spaces, contentW, sizes, colors } from "@utils";
+
+export const MainContainer = styled.section`
+  margin: ${spaces.xxl} 0;
+`;
 
 export const HeroContainer = styled.div`
   display: flex;
@@ -10,7 +14,7 @@ export const HeroContainer = styled.div`
   .greetings {
     font-size: ${sizes.xll};
     text-align: center;
-    padding-top: ${sizes.super};
+    padding-top: ${spaces.md};
     @media only screen and (max-width: ${contentW.mobile}) {
       font-size: ${sizes.xl};
       padding: 0 ${sizes.hg};

@@ -6,7 +6,6 @@ import Logo from "@atoms/logo/desktop/DesktopLogo";
 import Link from "@atoms/link/Link";
 import BurguerMenu from "@atoms/burguerMenu/BurguerMenu";
 import ConfirmBtn from "@atoms/confirmBtn/ConfirmBtn";
-import Modal from "@organisms/modal/Modal";
 
 //IMPORT STYLES
 import {
@@ -23,7 +22,7 @@ import {
 //IMPORT ASSETS
 import { languages } from "@utils";
 
-const Header = ({ onConfirmClick, onModalOpen, isModalOpen, onModalClose }) => {
+const Header = ({ toggleModal }) => {
   //HOOKS
   const [isMobile, setIsMobile] = useState(false);
   const [toggle, setToggle] = useState(false);
@@ -48,12 +47,13 @@ const Header = ({ onConfirmClick, onModalOpen, isModalOpen, onModalClose }) => {
   };
 
   const handleLink = link => {
+    setToggle();
     const section = document.getElementById(link);
     if (section) {
       section.scrollIntoView({
         behavior: "smooth",
-        block: "center",
-        inline: "end",
+        block: "start", //center
+        inline: "end", //end
       });
     }
   };
@@ -111,7 +111,7 @@ const Header = ({ onConfirmClick, onModalOpen, isModalOpen, onModalClose }) => {
         {!isMobile && (
           <HeaderContainerRight>
             {renderLanguages()}
-            <ConfirmBtn onClick={onConfirmClick} onModalOpen={onModalOpen} />
+            <ConfirmBtn onClick={toggleModal} />
           </HeaderContainerRight>
         )}
         {isMobile && <BurguerMenu onClick={handleToggle} active={toggle} />}
@@ -122,7 +122,6 @@ const Header = ({ onConfirmClick, onModalOpen, isModalOpen, onModalClose }) => {
           {renderLanguages()}
         </MobileMenuContainer>
       )}
-      {isModalOpen && <Modal onClose={onModalClose} />}
     </HeaderWrapper>
   );
 };

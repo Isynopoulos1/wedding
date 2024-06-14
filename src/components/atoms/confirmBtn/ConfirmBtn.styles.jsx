@@ -13,9 +13,9 @@ export const BtnContainer = styled.button`
   cursor: pointer;
   font-size: ${sizes.sm};
   &:hover {
-    background-color: ${colors.silver};
-    color: ${colors.white};
-    border: 1px solid ${colors.silver};
+    background-color: #dedede;
+    color: ${colors.black};
+    border: 1px solid ${colors.black};
     transition: background-color 0.3s ease;
   }
 `;
