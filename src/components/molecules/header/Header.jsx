@@ -119,6 +119,7 @@ const Header = ({ toggleModal }) => {
       {isMobile && toggle && (
         <MobileMenuContainer>
           {renderLinks()}
+          <ConfirmBtn onClick={toggleModal} />
           {renderLanguages()}
         </MobileMenuContainer>
       )}

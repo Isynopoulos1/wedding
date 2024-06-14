@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { zindex, spaces, contentW, sizes, colors } from "@utils";
+import { spaces, contentW, sizes, colors } from "@utils";
 
 export const BtnContainer = styled.button`
   display: flex;
@@ -17,5 +17,8 @@ export const BtnContainer = styled.button`
     color: ${colors.black};
     border: 1px solid ${colors.black};
     transition: background-color 0.3s ease;
+  }
+  @media only screen and (max-width: ${contentW.tablet}) {
+    margin-top: ${spaces.xs};
   }
 `;

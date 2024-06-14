@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { zindex, spaces, contentW, sizes, colors } from "@utils";
+import { zindex, colors } from "@utils";
 
 export const ModalWrapper = styled.div`
   position: fixed;
@@ -15,7 +15,7 @@ export const ModalWrapper = styled.div`
 `;
 
 export const ModalContent = styled.div`
-  background: white;
+  background: ${colors.white};
   padding: 2rem;
   border-radius: 8px;
   position: relative;

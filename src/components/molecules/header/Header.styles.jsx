@@ -28,7 +28,6 @@ export const HeaderContainer = styled.div`
 
 export const Nav = styled.nav`
   display: flex;
-  gap: ${spaces.xs};
   @media only screen and (max-width: ${contentW.tablet}) {
     flex-direction: column;
     font-size: ${sizes.hg};
