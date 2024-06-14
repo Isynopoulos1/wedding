@@ -5,15 +5,7 @@ import { HeroContainer, InfoContainer, MainContainer } from "./When.styles";
 //IMPORT COMPONENTS
 import Logo from "@atoms/logo/mobile/MobileLogo";
 
-export const When = ({ onConfirmClick, onModalOpen }) => {
-  const handleClick = () => {
-    if (typeof onConfirmClick === "function") {
-      onConfirmClick();
-    }
-    if (typeof onModalOpen === "function") {
-      onModalOpen();
-    }
-  };
+export const When = ({ onModalOpen }) => {
   return (
     <MainContainer id="when">
       <HeroContainer>

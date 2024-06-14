@@ -24,13 +24,13 @@ const App = () => {
   return (
     <>
       <GlobalStyles />
-      <Header isModalOpen={isModalOpen} toggleModal={handleModal} />
+      {isModalOpen && <Modal onClose={handleModal} />}
+      <Header toggleModal={handleModal} />
       <When onModalOpen={handleModal} />
       <Where />
       <How />
 
       <Footer />
-      {isModalOpen && <Modal onClose={handleModal} />}
     </>
   );
 };
