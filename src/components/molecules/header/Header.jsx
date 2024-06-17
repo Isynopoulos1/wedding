@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
+import { getTranslate } from "react-redux-translates";
 import { contentW } from "@utils";
 
 //IMPORT COMPONENTS
@@ -26,6 +28,7 @@ const Header = ({ toggleModal }) => {
   //HOOKS
   const [isMobile, setIsMobile] = useState(false);
   const [toggle, setToggle] = useState(false);
+  const translate = useSelector(state => getTranslate(state.localize));
 
   //LIFECYCLES
   useEffect(() => {
@@ -52,8 +55,8 @@ const Header = ({ toggleModal }) => {
     if (section) {
       section.scrollIntoView({
         behavior: "smooth",
-        block: "start", //center
-        inline: "end", //end
+        block: "start",
+        inline: "end",
       });
     }
   };

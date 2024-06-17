@@ -1,4 +1,6 @@
 import React from "react";
+import { getTranslate } from "react-redux-translates";
+import { useSelector } from "react-redux";
 //IMPORT STYLES
 
 import { HeroContainer, InfoContainer, MainContainer } from "./When.styles";
@@ -6,25 +8,20 @@ import { HeroContainer, InfoContainer, MainContainer } from "./When.styles";
 import Logo from "@atoms/logo/mobile/MobileLogo";
 
 export const When = ({ onModalOpen }) => {
+  const translate = useSelector(state => getTranslate(state.localize));
+
   return (
     <MainContainer id="when">
       <HeroContainer>
-        <p className="greetings">Celebrate our wedding!</p>
         <div className="line"></div>
         <Logo />
         <div className="line"></div>
       </HeroContainer>
       <InfoContainer>
-        <p>Sunday, October 27, 2024</p>
-        <p className="intro">
-          Two origins, two cultures, two languages, but one destiny.
-          <br />
-          Spain, halfway between France and Mexico, the rightful heir to our
-          future world. <br />
-          With joy, we invite you to our wedding ceremony, which will take place
-          at Castell de Tous in Barcelona. <br />
-          Your presence and support on this very special day mean a lot to us.
-        </p>
+        <p className="date">Sunday, October 27, 2024</p>
+        <p>{translate("when.intro.1")}</p>
+        <p>{translate("when.intro.2")}</p>
+
         <a href="#" onClick={onModalOpen}>
           Confirm Attendance
         </a>
