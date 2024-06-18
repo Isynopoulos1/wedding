@@ -24,7 +24,7 @@ import {
 //IMPORT ASSETS
 import { languages } from "@utils";
 
-const Header = ({ toggleModal }) => {
+const Header = ({ toggleModal, setActiveLanguage }) => {
   //HOOKS
   const [isMobile, setIsMobile] = useState(false);
   const [toggle, setToggle] = useState(false);
@@ -44,9 +44,9 @@ const Header = ({ toggleModal }) => {
     };
   }, []);
 
-  //HANDLE FUNCTIONS
-  const handleTranslation = link => {
-    alert(link);
+  const handleTranslation = async language => {
+    setToggle();
+    await setActiveLanguage(language?.code);
   };
 
   const handleLink = link => {
@@ -94,8 +94,9 @@ const Header = ({ toggleModal }) => {
           <React.Fragment key={language.name}>
             <Link
               label={language.name}
-              onClick={() => handleTranslation("TODO LANGUAGE LOGIC")}
+              onClick={() => handleTranslation(language)}
             />
+
             {index < languages.length - 1 && <Line />}
           </React.Fragment>
         ))}

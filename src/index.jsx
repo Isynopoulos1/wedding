@@ -1,5 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
+import { createRoot } from "react-dom/client";
 
 // TRANSLATION IMPORTS
 import { LocalizeProvider } from "react-redux-translates";
@@ -20,4 +21,5 @@ const appRender = (
   </Provider>
 );
 
-render(appRender, rootElement);
+const root = createRoot(rootElement);
+root.render(appRender);

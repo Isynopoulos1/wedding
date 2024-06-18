@@ -13,7 +13,7 @@ import Where from "@molecules/where/Where";
 import How from "@molecules/how/How";
 import Modal from "@organisms/modal/Modal";
 
-const App = ({ addTranslationForLanguage, setActiveLanguage, languages }) => {
+const App = ({ addTranslationForLanguage, setActiveLanguage }) => {
   // USE ONCE
   useEffect(() => {
     activateTranslations(addTranslationForLanguage);
@@ -30,7 +30,7 @@ const App = ({ addTranslationForLanguage, setActiveLanguage, languages }) => {
     <>
       <GlobalStyles />
       {isModalOpen && <Modal onClose={handleModal} />}
-      <Header toggleModal={handleModal} />
+      <Header setActiveLanguage={setActiveLanguage} toggleModal={handleModal} />
       <When onModalOpen={handleModal} />
       <Where />
       <How />
