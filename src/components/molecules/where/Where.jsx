@@ -18,8 +18,9 @@ const Where = () => {
       <SectionWrapper>
         <p className="title">{translate("where.text.1")}</p>
         <p>{translate("where.text.2")}</p>
-        <a href="https://www.uauu.cat/es/castell-de-tous/">
-          Carrer del Castell, 1, Sant Martí de Tous.
+
+        <a href="https://maps.app.goo.gl/bgR16fWZStxnXmBm6" target="_blank">
+          <p className="link">{translate("where.text.3")}</p>
         </a>
         <div className="line"></div>
       </SectionWrapper>

@@ -65,6 +65,16 @@ const Header = ({ toggleModal, setActiveLanguage }) => {
     setToggle(!toggle);
   };
 
+  const handleLogoClick = () => {
+    const section = document.getElementById("hero");
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "end",
+      });
+    }
+  };
   //DATA
   const links = [
     { label: "When", href: "when" },
@@ -109,7 +119,7 @@ const Header = ({ toggleModal, setActiveLanguage }) => {
     <HeaderWrapper>
       <HeaderContainer>
         <HeaderLeftContainer>
-          <Logo />
+          <Logo onClick={handleLogoClick} />
           {!isMobile && renderLinks()}
         </HeaderLeftContainer>
         {!isMobile && (

@@ -2,14 +2,15 @@ import styled from "styled-components";
 import { spaces, colors, contentW } from "@utils";
 
 export const MainContainer = styled.section`
-  margin: ${spaces.xxl} 0;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: 1500px;
   justify-content: center;
   align-items: center;
   .line {
-    width: 80%;
+    width: 100%;
     height: 1px;
     background-color: ${colors.black};
     margin: ${spaces.md} 0px;
@@ -24,7 +25,7 @@ export const InfoContainer = styled.div`
   padding-top: 100px;
   height: auto;
   text-align: center;
-  font-size: 24px;
+  font-size: 32px;
   justify-content: center;
   flex-direction: column;
 
@@ -57,27 +58,32 @@ export const Ceremony = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  font-size: 20px;
+  font-size: 24px;
+
   text-align: center;
   p {
     margin: 0;
+  }
+  .hour {
+    font-style: italic;
   }
 `;
 export const Bus = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 20px;
+  font-size: 24px;
   text-align: center;
   p {
     margin: 0;
   }
-  .title {
-    padding-bottom: 20px;
-  }
   .hour {
+    font-style: italic;
+  }
+
+  .title {
+    padding-bottom: 24px;
     font-weight: bold;
-    font-size: 20px;
   }
 `;
 export const Link = styled.div`

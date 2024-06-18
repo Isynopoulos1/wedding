@@ -2,11 +2,12 @@ import styled from "styled-components";
 import { spaces, colors, contentW } from "@utils";
 
 export const MainContainer = styled.section`
-  margin: ${spaces.xxl} 0;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  max-width: 1500px;
   align-items: center;
 `;
 
@@ -15,14 +16,16 @@ export const SectionWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  font-size: 20px;
+  font-size: 24px;
   padding-top: 30px;
+
   p {
     margin: 0;
+    font-style: italic;
   }
 
   .line {
-    width: 80%;
+    width: 100%;
     height: 1px;
     background-color: ${colors.black};
     margin: ${spaces.md} 0px;
@@ -30,17 +33,23 @@ export const SectionWrapper = styled.div`
       margin: ${spaces.sm} 0px;
     }
   }
+  .link {
+    font-style: normal;
+  }
   .title {
     font-weight: bold;
+    padding-bottom: 10px;
+    font-style: normal;
   }
   a {
-    padding-top: 30px;
+    padding-top: 40px;
+    font-size: 24px;
     color: black;
   }
 `;
 
 export const ImageContainer = styled.div`
-  width: 80%;
+  width: 100%;
   height: 600px;
   overflow: hidden;
   position: relative;

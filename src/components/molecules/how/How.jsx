@@ -25,11 +25,11 @@ const How = () => {
           {" "}
           <Details>
             <p className="title">{translate("how.text.4")}</p>
-            <p>{translate("how.text.5")}</p>
-            <p>{translate("how.text.6")}</p>
+            <p className="hour">{translate("how.text.5")}</p>
+            <p className="hour">{translate("how.text.6")}</p>
           </Details>
           <Link>
-            <a href="https://www.uauu.cat/es/castell-de-tous/">
+            <a href="https://maps.app.goo.gl/ARx399JHFJWvn7bQ7" target="_blank">
               <p>{translate("how.text.7")}</p>
             </a>
           </Link>
@@ -37,11 +37,11 @@ const How = () => {
         <Ceremony>
           <Details>
             <p className="title">{translate("how.text.8")}</p>
-            <p>{translate("how.text.9")}</p>
+            <p className="hour">{translate("how.text.9")}</p>
           </Details>
 
           <Link>
-            <a href="https://www.uauu.cat/es/castell-de-tous/">
+            <a href="https://maps.app.goo.gl/Ga18eH6m39VW1e9J9" target="_blank">
               <p>{translate("how.text.10")}</p>
             </a>
           </Link>

@@ -4,10 +4,10 @@ import { useSelector } from "react-redux";
 //IMPORT STYLES
 
 import {
-  HeroContainer,
   IntroContainer,
   MainContainer,
   WhenSection,
+  HeroContainer,
   Img,
   Containers,
   TextDetails,
@@ -23,14 +23,27 @@ import Logo from "@atoms/logo/mobile/MobileLogo";
 export const When = ({ onModalOpen }) => {
   const translate = useSelector(state => getTranslate(state.localize));
 
+  //HANDLE FUNCTIONS
+  const handleLogoClick = () => {
+    console.log("Logo clicked!");
+    const section = document.getElementById("when");
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "end",
+      });
+    }
+  };
+
   return (
-    <MainContainer id="when">
-      <HeroContainer>
+    <MainContainer>
+      <HeroContainer id="hero" onClick={handleLogoClick}>
         <div className="line"></div>
         <Logo />
         <div className="line"></div>
       </HeroContainer>
-      <IntroContainer>
+      <IntroContainer id="when">
         <p className="date">{translate("when.date")}</p>
         <p>{translate("when.intro.1")}</p>
         <p>{translate("when.intro.2")}</p>
