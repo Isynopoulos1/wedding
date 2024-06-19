@@ -1,56 +1,94 @@
 import styled from "styled-components";
-import { spaces, colors, contentW } from "@utils";
+import { spaces, colors, contentW, sizes } from "@utils";
 
 export const MainContainer = styled.section`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 1500px;
+  max-width: ${contentW.desktop};
   justify-content: center;
   align-items: center;
-  .line {
-    width: 100%;
-    height: 1px;
-    background-color: ${colors.black};
-    margin: ${spaces.md} 0px;
-    @media only screen and (max-width: ${contentW.tablet}) {
-      margin: ${spaces.sm} 0px;
-    }
-  }
 `;
+
 export const InfoContainer = styled.div`
   display: flex;
-  padding: 0 100px;
-  padding-top: 100px;
+  padding: 0 ${spaces.sm};
+
   height: auto;
   text-align: center;
-  font-size: 32px;
+  font-size: ${sizes.xl};
   justify-content: center;
   flex-direction: column;
 
   p {
     margin: 0;
   }
+
+  @media only screen and (max-width: ${contentW.desktop}) {
+    padding: 0 ${sizes.hg};
+  }
+
+  @media only screen and (max-width: ${contentW.mobile}) {
+    padding: 0 ${sizes.md};
+
+    p {
+      font-size: ${sizes.md};
+    }
+  }
 `;
 
 export const DetailCards = styled.div`
   display: flex;
   justify-content: center;
-  padding-top: 150px;
-  padding-bottom: 100px;
-  gap: 100px;
+  padding-top: ${spaces.md};
+  gap: ${spaces.sm};
+
+  @media only screen and (max-width: ${contentW.mobile}) {
+    flex-direction: column;
+    align-items: center;
+    gap: ${spaces.xs};
+    padding-top: ${spaces.xs};
+  }
 `;
+
 export const Details = styled.div`
   display: flex;
   flex-direction: column;
+  height: ${spaces.md};
 
-  height: 150px;
+  p {
+    margin: 0;
+    font-size: ${sizes.lg};
+  }
+
   .title {
-    padding-bottom: 20px;
+    padding-bottom: ${spaces.xss};
     justify-content: center;
     align-items: center;
     font-weight: bold;
+  }
+
+  .hour {
+    font-style: italic;
+  }
+
+  @media only screen and (max-width: ${contentW.mobile}) {
+    height: auto;
+    p,
+    .title,
+    .hour {
+      font-size: ${sizes.md};
+    }
+  }
+`;
+
+export const Link = styled.div`
+  display: flex;
+  justify-content: center;
+
+  a {
+    color: ${colors.black};
   }
 `;
 
@@ -58,38 +96,51 @@ export const Ceremony = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  font-size: 24px;
-
   text-align: center;
+
   p {
     margin: 0;
+    font-size: ${sizes.lg};
   }
+
   .hour {
     font-style: italic;
   }
+
+  @media only screen and (max-width: ${contentW.mobile}) {
+    p,
+    .hour,
+    .title {
+      font-size: ${sizes.md};
+    }
+  }
 `;
+
 export const Bus = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 24px;
   text-align: center;
+
   p {
     margin: 0;
+    font-size: ${sizes.lg};
   }
+
   .hour {
     font-style: italic;
   }
 
   .title {
-    padding-bottom: 24px;
+    padding-bottom: ${spaces.xss};
     font-weight: bold;
   }
-`;
-export const Link = styled.div`
-  display: flex;
-  justify-content: center;
-  a {
-    color: black;
+
+  @media only screen and (max-width: ${contentW.mobile}) {
+    p,
+    .hour,
+    .title {
+      font-size: ${sizes.md};
+    }
   }
 `;

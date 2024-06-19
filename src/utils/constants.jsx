@@ -11,6 +11,7 @@ export const sizes = {
   hg: "55px",
   xhg: "96px",
   xxhg: "100px",
+  xxl: "200px",
   xxxl: "250px",
   xxxxl: "350px",
   super: "500px",
@@ -47,7 +48,7 @@ export const zindex = {
 };
 
 export const contentW = {
-  mobile: "600px",
+  mobile: "700px",
   tablet: "900px",
   desktop: "1500px",
 };
@@ -67,4 +68,5 @@ export const colors = {
   silver: "#cccbcb",
   black: "#000000",
   white: "#ffffff",
+  minimal: "#00000021",
 };

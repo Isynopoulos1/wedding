@@ -19,13 +19,13 @@ import {
 
 //IMPORT COMPONENTS
 import Logo from "@atoms/logo/mobile/MobileLogo";
+import Line from "@atoms/line/Line";
 
 export const When = ({ onModalOpen }) => {
   const translate = useSelector(state => getTranslate(state.localize));
 
   //HANDLE FUNCTIONS
   const handleLogoClick = () => {
-    console.log("Logo clicked!");
     const section = document.getElementById("when");
     if (section) {
       section.scrollIntoView({
@@ -39,22 +39,22 @@ export const When = ({ onModalOpen }) => {
   return (
     <MainContainer>
       <HeroContainer id="hero" onClick={handleLogoClick}>
-        <div className="line"></div>
+        <Line />
         <Logo />
-        <div className="line"></div>
+        <Line />
       </HeroContainer>
-      <IntroContainer id="when">
+      <IntroContainer id="hero">
         <p className="date">{translate("when.date")}</p>
         <p>{translate("when.intro.1")}</p>
         <p>{translate("when.intro.2")}</p>
         <p>{translate("when.intro.3")}</p>
         <p>{translate("when.intro.4")}</p>
         <a href="#" onClick={onModalOpen}>
-          Confirm Attendance
+          {translate("confirm.button")}
         </a>
       </IntroContainer>
-      <WhenSection>
-        <div className="line"></div>
+      <WhenSection id="when">
+        <Line />
         <Containers>
           <Img
             src="https://ik.imagekit.io/ppayaz/iselalarcon/isela&erwan/iselayerwan.HEIC?updatedAt=1718651121135"
@@ -81,7 +81,7 @@ export const When = ({ onModalOpen }) => {
           </DetailsContainer>
         </Containers>
 
-        <div className="line"></div>
+        <Line />
       </WhenSection>
     </MainContainer>
   );

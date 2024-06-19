@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { spaces, colors, contentW } from "@utils";
+import { spaces, colors, contentW, formW } from "@utils";
 
 export const MainContainer = styled.section`
   margin: 0 auto;
@@ -7,7 +7,7 @@ export const MainContainer = styled.section`
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  max-width: 1500px;
+  max-width: ${contentW.desktop};
   align-items: center;
 `;
 
@@ -16,41 +16,43 @@ export const SectionWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  font-size: 24px;
-  padding-top: 30px;
+  font-size: ${sizes.lg};
+  padding-top: ${sizes.md};
 
   p {
     margin: 0;
     font-style: italic;
   }
 
-  .line {
-    width: 100%;
-    height: 1px;
-    background-color: ${colors.black};
-    margin: ${spaces.md} 0px;
-    @media only screen and (max-width: ${contentW.tablet}) {
-      margin: ${spaces.sm} 0px;
-    }
-  }
   .link {
     font-style: normal;
   }
   .title {
     font-weight: bold;
-    padding-bottom: 10px;
+    padding-bottom: ${sizes.md};
     font-style: normal;
   }
   a {
-    padding-top: 40px;
-    font-size: 24px;
+    padding-top: ${sizes.md};
+    font-size: ${sizes.lg};
     color: black;
+  }
+  @media only screen and (max-width: ${contentW.mobile}) {
+    p {
+      font-size: ${sizes.md};
+    }
+    .title {
+      font-size: ${sizes.md};
+    }
+    .hour {
+      font-size: ${sizes.md};
+    }
   }
 `;
 
 export const ImageContainer = styled.div`
   width: 100%;
-  height: 600px;
+  height: ${formW.md};
   overflow: hidden;
   position: relative;
 `;

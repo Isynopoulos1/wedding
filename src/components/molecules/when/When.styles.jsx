@@ -5,8 +5,9 @@ import { spaces, contentW, sizes, colors } from "@utils";
 export const MainContainer = styled.section`
   margin: 0 auto;
   width: 100%;
-  max-width: 1500px;
+  max-width: ${contentW.desktop};
 `;
+
 //HERO CONTAINER
 export const HeroContainer = styled.div`
   display: flex;
@@ -17,15 +18,6 @@ export const HeroContainer = styled.div`
   @media only screen and (max-width: ${contentW.tablet}) {
     flex-direction: column;
     padding-top: 0;
-  }
-  .line {
-    width: 100%;
-    height: 1px;
-    background-color: ${colors.black};
-    margin: ${spaces.md} 0px;
-    @media only screen and (max-width: ${contentW.tablet}) {
-      margin: ${spaces.sm} 0px;
-    }
   }
 `;
 
@@ -44,7 +36,7 @@ export const IntroContainer = styled.div`
   }
   .date {
     padding-bottom: ${sizes.xl};
-    font-size: 24px;
+    font-size: ${sizes.lg};
     font-style: italic;
   }
   .intro {
@@ -56,133 +48,209 @@ export const IntroContainer = styled.div`
     font-size: ${sizes.xl};
     padding-top: ${sizes.xl};
   }
-  .line {
-    width: 100%;
-    height: 1px;
-    background-color: ${colors.black};
-    margin: ${spaces.md} 0px;
-  }
 
   //RESPONSIVE RULES
-  @media only screen and (max-width: ${contentW.tablet}) {
-    flex-direction: column;
+  @media only screen and (max-width: ${contentW.desktop}) {
     padding: 0 ${sizes.hg};
 
-    p {
-      font-size: ${sizes.md};
-    }
     .intro {
       font-size: ${sizes.md};
       padding: ${spaces.xs} 0;
     }
+  }
+
+  @media only screen and (max-width: ${contentW.mobile}) {
+    padding: 0 ${sizes.md};
+    p,
     a {
       font-size: ${sizes.md};
     }
-    .line {
-      margin: ${spaces.sm} 0px;
+    .date {
+      font-size: ${sizes.md};
     }
   }
 `;
+
+//WHEN SECTION
 export const WhenSection = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
   align-items: center;
   flex-direction: column;
-
-  .line {
-    width: 100%;
-    height: 1px;
-    background-color: ${colors.black};
-    margin: ${spaces.md} 0px;
-  }
 `;
+
+//CONTAINERS
 export const Containers = styled.div`
   display: flex;
   width: 100%;
   height: auto;
-  gap: 20px;
+  gap: ${sizes.md};
 
   @media only screen and (max-width: ${contentW.desktop}) {
     flex-direction: column;
   }
 `;
+
+//IMG
 export const Img = styled.img`
   display: flex;
-  width: 500px;
+  width: ${sizes.super};
+
   @media only screen and (max-width: ${contentW.desktop}) {
     width: 100%;
   }
 `;
+
+//DETAILS CONTAINER
 export const DetailsContainer = styled.div`
   width: 100%;
   justify-content: center;
 `;
+
+//TEXT DETAILS
 export const TextDetails = styled.div`
   display: flex;
   flex-direction: column;
-  font-size: 32px;
+  font-size: ${sizes.xl};
   text-align: center;
   width: 100%;
   height: auto;
   align-items: center;
-  padding-top: 150px;
+  padding-top: ${spaces.md};
+
   p {
     margin: 0;
   }
-`;
-export const DetailsCards = styled.div`
-  display: flex;
-  height: 200px;
-  align-items: center;
-  gap: 50px;
-  justify-content: center;
-`;
-export const Ceremony = styled.div`
-  display: flex;
-  flex-direction: column;
-  font-size: 24px;
-  text-align: center;
-  p {
-    margin: 0;
-    font-size: 24px;
-  }
-  .title {
-    padding-bottom: 20px;
-    font-weight: bold;
-    font-size: 24px;
-  }
-  .hour {
-    font-size: 24px;
-    font-style: italic;
-  }
+
   @media only screen and (max-width: ${contentW.desktop}) {
     p {
-      font-size: 20px;
+      padding: 0 ${sizes.hg};
+    }
+  }
+  @media only screen and (max-width: ${contentW.mobile}) {
+    padding-top: ${spaces.xs};
+    p {
+      padding: 0 ${sizes.md};
+      font-size: ${sizes.md};
     }
   }
 `;
+
+//DETAILS CARDS
+export const DetailsCards = styled.div`
+  display: flex;
+  height: ${sizes.xxl};
+  align-items: center;
+  gap: ${spaces.xs};
+  justify-content: center;
+
+  @media only screen and (max-width: ${contentW.tablet}) {
+    font-size: ${sizes.lg};
+    padding-top: ${spaces.xs};
+  }
+  @media only screen and (max-width: ${contentW.mobile}) {
+    flex-direction: column;
+  }
+`;
+
+//CEREMONY
+export const Ceremony = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-size: ${sizes.lg};
+  text-align: center;
+
+  p {
+    margin: 0;
+    font-size: ${sizes.lg};
+  }
+
+  .title {
+    padding-bottom: ${sizes.md};
+    font-weight: bold;
+    font-size: ${sizes.lg};
+  }
+
+  .hour {
+    font-size: ${sizes.lg};
+    font-style: italic;
+  }
+
+  @media only screen and (max-width: ${contentW.desktop}) {
+    p {
+      font-size: ${sizes.lg};
+    }
+    .title {
+      font-size: ${sizes.lg};
+    }
+    .hour {
+      font-size: ${sizes.lg};
+    }
+  }
+
+  @media only screen and (max-width: ${contentW.tablet}) {
+    flex-direction: column;
+  }
+  @media only screen and (max-width: ${contentW.mobile}) {
+    p {
+      font-size: ${sizes.md};
+    }
+    .title {
+      font-size: ${sizes.md};
+    }
+    .hour {
+      font-size: ${sizes.md};
+    }
+`;
+
+//RECEPTION
 export const Reception = styled.div`
   display: flex;
   flex-direction: column;
-  font-size: 24px;
+  font-size: ${sizes.lg};
   text-align: center;
+
   p {
     margin: 0;
-    font-size: 24px;
+    font-size: ${sizes.lg};
   }
+
   .title {
-    padding-bottom: 20px;
+    padding-bottom: ${sizes.md};
     font-weight: bold;
-    font-size: 24px;
+    font-size: ${sizes.lg};
   }
+
   .hour {
-    font-size: 24px;
+    font-size: ${sizes.lg};
     font-style: italic;
   }
+
   @media only screen and (max-width: ${contentW.desktop}) {
     p {
-      font-size: 20px;
+      font-size: ${sizes.lg};
+    }
+    .title {
+      font-size: ${sizes.lg};
+    }
+    .hour {
+      font-size: ${sizes.lg};
+    }
+  }
+
+  @media only screen and (max-width: ${contentW.tablet}) {
+    flex-direction: column;
+  }
+  @media only screen and (max-width: ${contentW.mobile}) {
+    p {
+      font-size: ${sizes.md};
+    }
+    .title {
+      font-size: ${sizes.md};
+    }
+    .hour {
+      font-size: ${sizes.md};
     }
   }
 `;

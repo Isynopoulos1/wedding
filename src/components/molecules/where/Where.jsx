@@ -8,6 +8,9 @@ import {
   InnerImage,
 } from "./Where.styles";
 
+//IMPORT COMPONENTS
+import Line from "@atoms/line/Line";
+
 const Where = () => {
   const translate = useSelector(state => getTranslate(state.localize));
   return (
@@ -22,7 +25,7 @@ const Where = () => {
         <a href="https://maps.app.goo.gl/bgR16fWZStxnXmBm6" target="_blank">
           <p className="link">{translate("where.text.3")}</p>
         </a>
-        <div className="line"></div>
+        <Line />
       </SectionWrapper>
     </MainContainer>
   );
