@@ -5,13 +5,14 @@ import ES from "@assets/translations/es.translations.json";
 import FR from "@assets/translations/fr.translations.json";
 
 export {
-  sizes,
+  colors,
+  contentW,
   fonts,
+  formW,
+  sizes,
   spaces,
   weights,
   zindex,
-  contentW,
-  colors,
 } from "./constants";
 
 export const languages = [

@@ -1,5 +1,5 @@
+import { contentW, formW, sizes } from "@utils";
 import styled from "styled-components";
-import { spaces, colors, contentW, formW } from "@utils";
 
 export const MainContainer = styled.section`
   margin: 0 auto;
