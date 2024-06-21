@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
+import { getTranslate } from "react-redux-translates";
 import { contentW } from "@utils";
 
 //IMPORT COMPONENTS
@@ -22,10 +24,11 @@ import {
 //IMPORT ASSETS
 import { languages } from "@utils";
 
-const Header = ({ toggleModal }) => {
+const Header = ({ toggleModal, setActiveLanguage }) => {
   //HOOKS
   const [isMobile, setIsMobile] = useState(false);
   const [toggle, setToggle] = useState(false);
+  const translate = useSelector(state => getTranslate(state.localize));
 
   //LIFECYCLES
   useEffect(() => {
@@ -41,9 +44,9 @@ const Header = ({ toggleModal }) => {
     };
   }, []);
 
-  //HANDLE FUNCTIONS
-  const handleTranslation = link => {
-    alert(link);
+  const handleTranslation = async language => {
+    setToggle();
+    await setActiveLanguage(language?.code);
   };
 
   const handleLink = link => {
@@ -52,8 +55,8 @@ const Header = ({ toggleModal }) => {
     if (section) {
       section.scrollIntoView({
         behavior: "smooth",
-        block: "start", //center
-        inline: "end", //end
+        block: "start",
+        inline: "end",
       });
     }
   };
@@ -62,6 +65,16 @@ const Header = ({ toggleModal }) => {
     setToggle(!toggle);
   };
 
+  const handleLogoClick = () => {
+    const section = document.getElementById("hero");
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "end",
+      });
+    }
+  };
   //DATA
   const links = [
     { label: "When", href: "when" },
@@ -91,8 +104,9 @@ const Header = ({ toggleModal }) => {
           <React.Fragment key={language.name}>
             <Link
               label={language.name}
-              onClick={() => handleTranslation("TODO LANGUAGE LOGIC")}
+              onClick={() => handleTranslation(language)}
             />
+
             {index < languages.length - 1 && <Line />}
           </React.Fragment>
         ))}
@@ -105,7 +119,7 @@ const Header = ({ toggleModal }) => {
     <HeaderWrapper>
       <HeaderContainer>
         <HeaderLeftContainer>
-          <Logo />
+          <Logo onClick={handleLogoClick} />
           {!isMobile && renderLinks()}
         </HeaderLeftContainer>
         {!isMobile && (

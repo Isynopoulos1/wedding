@@ -6,7 +6,7 @@ export const BtnContainer = styled.button`
   align-items: center;
   justify-content: center;
   padding: ${sizes.xs} ${sizes.xs};
-  border: 1px solid ${colors.black};
+  border: 1px solid ${colors.minimal};
   color: ${colors.black};
   background-color: ${colors.white};
   border-radius: 0;
@@ -15,7 +15,7 @@ export const BtnContainer = styled.button`
   &:hover {
     background-color: #dedede;
     color: ${colors.black};
-    border: 1px solid ${colors.black};
+    border: 1px solid ${colors.silver};
     transition: background-color 0.3s ease;
   }
   @media only screen and (max-width: ${contentW.tablet}) {
