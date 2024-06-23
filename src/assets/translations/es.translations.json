@@ -26,5 +26,19 @@
   "how.text.7": "Punto de encuentro",
   "how.text.8": "CEREMONIA",
   "how.text.9": "14:00h ",
-  "how.text.10": "Castell de Tous, Barcelona"
+  "how.text.10": "Castell de Tous, Barcelona",
+  "modal.text.1": "CONFIRMAR ASISTENCIA",
+  "modal.text.2": "Por favor confirma antes del 1 de agosto de 2024.",
+  "modal.text.3": "Nombre (requerido)",
+  "modal.text.4": "Apellido (requerido)",
+  "modal.text.5": "Correo electrónico (requerido)",
+  "modal.text.6": "¿Asistirás? (requerido)",
+  "modal.text.7": " Sí",
+  "modal.text.8": " No",
+  "modal.text.9": "Selecciona tu tipo de dieta",
+  "modal.text.10": "Menú normal",
+  "modal.text.11": "Libre de gluten",
+  "modal.text.12": "Vegano",
+  "modal.text.13": "Otro",
+  "modal.send.btn": "Enviar"
 }

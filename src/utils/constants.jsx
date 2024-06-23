@@ -1,4 +1,5 @@
 export const sizes = {
+  tiny: "8px",
   xss: "10px",
   xs: "12px",
   sm: "14px",
@@ -24,6 +25,7 @@ export const fonts = {
 };
 
 export const spaces = {
+  tiny: "5px",
   xss: " 20px",
   xs: " 50px",
   ssm: " 64px",
