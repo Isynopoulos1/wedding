@@ -71,4 +71,5 @@ export const colors = {
   black: "#000000",
   white: "#ffffff",
   minimal: "#00000021",
+  hover: "#f3f3f3",
 };
