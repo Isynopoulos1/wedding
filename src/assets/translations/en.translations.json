@@ -36,9 +36,9 @@
   "modal.text.7": " Yes",
   "modal.text.8": " No",
   "modal.text.9": "Select your dietary type",
-  "modal.text.10": "REGULAR_MENU",
-  "modal.text.11": "GLUTEN_FREE",
-  "modal.text.12": "VEGAN",
+  "modal.text.10": "Regular menu",
+  "modal.text.11": "Gluten free",
+  "modal.text.12": "Vegan",
   "modal.text.13": "Other",
   "modal.send.btn": "Send"
 }

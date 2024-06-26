@@ -119,9 +119,9 @@ const Modal = ({ onClose }) => {
               value={formData.dietaryType}
               onChange={handleChange}
             >
-              <option value="Regular menu">{translate("modal.text.10")}</option>
-              <option value="Gluten-free">{translate("modal.text.11")}</option>
-              <option value="Vegan">{translate("modal.text.12")}</option>
+              <option value="REGULAR_MENU">{translate("modal.text.10")}</option>
+              <option value="GLUTEN_FREE">{translate("modal.text.11")}</option>
+              <option value="VEGAN">{translate("modal.text.12")}</option>
             </select>
           </label>
           <br />
