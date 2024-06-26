@@ -36,9 +36,9 @@
   "modal.text.7": "Oui",
   "modal.text.8": "Non",
   "modal.text.9": "Sélectionnez votre type de régime alimentaire",
-  "modal.text.10": "Menu régulier",
-  "modal.text.11": "Sans gluten",
-  "modal.text.12": "Végétalien",
+  "modal.text.10": "MENU_RÉGULIER",
+  "modal.text.11": "SANS_GLUTEN",
+  "modal.text.12": "VÉGÉTALIEN",
   "modal.text.13": "Autre",
   "modal.send.btn": "Envoyer"
 }

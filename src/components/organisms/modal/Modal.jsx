@@ -21,9 +21,8 @@ const Modal = ({ onClose }) => {
     firstName: "",
     lastName: "",
     email: "",
-    attendance: "",
+    isConfirmed: "",
     dietaryType: "Regular menu",
-    companions: "",
     other: "",
   });
   //HANDLE FUNCTIONS
@@ -89,9 +88,9 @@ const Modal = ({ onClose }) => {
             <RadioLabel>
               <input
                 type="radio"
-                name="attendance"
+                name="isConfirmed"
                 value="yes"
-                checked={formData.attendance === "yes"}
+                checked={formData.isConfirmed === "yes"}
                 onChange={handleChange}
                 required
               />
@@ -101,9 +100,9 @@ const Modal = ({ onClose }) => {
             <RadioLabel>
               <input
                 type="radio"
-                name="attendance"
+                name="isConfirmed"
                 value="no"
-                checked={formData.attendance === "no"}
+                checked={formData.isConfirmed === "no"}
                 onChange={handleChange}
                 required
               />
