@@ -6,16 +6,16 @@ export const BtnWrapper = styled.button`
   justify-content: center;
   width: 100%;
   padding: ${sizes.xs} ${sizes.xs};
-  border: 1px solid ${colors.minimal};
+  border: none;
   color: ${colors.black};
-  background-color: ${colors.white};
+  background-color: ${colors.minimal};
   border-radius: 0;
   cursor: pointer;
   font-size: ${sizes.sm};
   &:hover {
     background-color: ${colors.hover};
-    color: ${colors.black};
-    border: 1px solid ${colors.black};
+    color: ${colors.minimal};
+    border: none;
     transition: background-color 0.3s ease;
   }
 `;

@@ -8,8 +8,6 @@ import {
   CloseButton,
   ModalHeader,
   Form,
-  RadioGroup,
-  RadioLabel,
 } from "./Modal.styles";
 //IMPORT COMPONENTS
 import SendBtn from "@atoms/sendBtn/SendBtn";
@@ -23,7 +21,7 @@ const Modal = ({ onClose }) => {
     email: "",
     isConfirmed: "",
     dietaryType: "Regular menu",
-    other: "",
+    more: "",
   });
   //HANDLE FUNCTIONS
   const handleChange = e => {
@@ -36,6 +34,7 @@ const Modal = ({ onClose }) => {
   const handleSubmit = e => {
     e.preventDefault();
     console.log(formData);
+    onClose();
   };
   //MAIN RENDER
   return (
@@ -82,35 +81,18 @@ const Modal = ({ onClose }) => {
             />
           </label>
           <br />
-
-          <RadioGroup>
-            <label>{translate("modal.text.6")}</label>
-            <RadioLabel>
-              <input
-                type="radio"
-                name="isConfirmed"
-                value="yes"
-                checked={formData.isConfirmed === "yes"}
-                onChange={handleChange}
-                required
-              />
-              <span></span>
-              {translate("modal.text.7")}
-            </RadioLabel>
-            <RadioLabel>
-              <input
-                type="radio"
-                name="isConfirmed"
-                value="no"
-                checked={formData.isConfirmed === "no"}
-                onChange={handleChange}
-                required
-              />
-              <span></span>
-              {translate("modal.text.8")}
-            </RadioLabel>
-          </RadioGroup>
-
+          <label>
+            {translate("modal.text.6")}
+            <select
+              name="isConfirmed"
+              value={formData.isConfirmed}
+              onChange={handleChange}
+              required
+            >
+              <option value="YES">{translate("modal.text.7")}</option>
+              <option value="NO">{translate("modal.text.8")}</option>
+            </select>
+          </label>
           <br />
           <label>
             {translate("modal.text.9")}
@@ -128,8 +110,8 @@ const Modal = ({ onClose }) => {
           <label>
             {translate("modal.text.13")}
             <textarea
-              name="other"
-              value={formData.other}
+              name="more"
+              value={formData.more}
               onChange={handleChange}
               rows={4}
             />
