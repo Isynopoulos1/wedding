@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { zindex, colors } from "@utils";
+import { zindex, colors, contentW, sizes, spaces } from "@utils";
 
 export const ModalWrapper = styled.div`
   position: fixed;
@@ -16,17 +16,64 @@ export const ModalWrapper = styled.div`
 
 export const ModalContent = styled.div`
   background: ${colors.white};
-  padding: 2rem;
-  border-radius: 8px;
+  padding: ${sizes.xl};
+  border-radius: ${sizes.tiny};
   position: relative;
+  min-width: ${contentW.desktop};
+
+  @media only screen and (max-width: ${contentW.tablet}) {
+    width: 100%;
+    min-width: 0;
+  }
 `;
 
 export const CloseButton = styled.button`
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: ${sizes.xss};
+  right: ${sizes.xss};
   background: none;
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
+`;
+export const ModalHeader = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  h1 {
+    font-size: ${sizes.xll};
+  }
+  p {
+    font-size: ${sizes.xl};
+  }
+`;
+export const Form = styled.form`
+  font-family: roboto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  input,
+  select,
+  textarea {
+    padding: ${sizes.tiny};
+    font-size: ${sizes.ssm};
+    margin-top: ${sizes.tiny};
+    border: 1px solid ${colors.minimal};
+    padding: ${spaces.tiny} 0;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      border-color: ${colors.black};
+      outline: none;
+    }
+  }
+
+  label {
+    font-size: ${sizes.ssm};
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 `;

@@ -13,9 +13,9 @@ export const BtnContainer = styled.button`
   cursor: pointer;
   font-size: ${sizes.sm};
   &:hover {
-    background-color: #dedede;
+    background-color: ${colors.hover};
     color: ${colors.black};
-    border: 1px solid ${colors.silver};
+    border: 1px solid ${colors.black};
     transition: background-color 0.3s ease;
   }
   @media only screen and (max-width: ${contentW.tablet}) {
