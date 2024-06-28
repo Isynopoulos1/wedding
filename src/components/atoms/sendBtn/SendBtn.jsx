@@ -5,14 +5,8 @@ import { useSelector } from "react-redux";
 
 const sendBtn = ({ onClick }) => {
   const translate = useSelector(state => getTranslate(state.localize));
-  const handleClick = () => {
-    return console.log(" clicked");
-    if (onClick) {
-      onClick();
-    }
-  };
   return (
-    <BtnWrapper onClick={handleClick}>{translate("modal.send.btn")}</BtnWrapper>
+    <BtnWrapper onClick={onClick}>{translate("modal.send.btn")}</BtnWrapper>
   );
 };
 

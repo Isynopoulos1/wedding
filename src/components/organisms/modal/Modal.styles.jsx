@@ -16,10 +16,10 @@ export const ModalWrapper = styled.div`
 
 export const ModalContent = styled.div`
   background: ${colors.white};
-  padding: ${sizes.xl};
+  padding: ${sizes.hg};
   border-radius: ${sizes.tiny};
   position: relative;
-  min-width: ${contentW.desktop};
+  min-width: ${contentW.tablet};
 
   @media only screen and (max-width: ${contentW.tablet}) {
     width: 100%;
@@ -43,7 +43,7 @@ export const ModalHeader = styled.div`
   flex-direction: column;
   text-align: center;
   h1 {
-    font-size: ${sizes.xll};
+    font-size: ${sizes.xxll};
   }
   p {
     font-size: ${sizes.xl};
