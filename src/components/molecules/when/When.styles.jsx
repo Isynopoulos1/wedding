@@ -85,10 +85,11 @@ export const Containers = styled.div`
   display: flex;
   width: 100%;
   height: auto;
-  gap: ${sizes.md};
+  gap: ${sizes.xll};
 
   @media only screen and (max-width: ${contentW.desktop}) {
     flex-direction: column;
+    gap: 0;
   }
 `;
 

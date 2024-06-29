@@ -19,7 +19,7 @@ const Modal = ({ onClose }) => {
     firstName: "",
     lastName: "",
     email: "",
-    isConfirmed: "",
+    isConfirmed: "YES",
     dietaryType: "Regular menu",
     more: "",
   });
@@ -31,11 +31,43 @@ const Modal = ({ onClose }) => {
       [name]: value,
     });
   };
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault();
-    console.log(formData);
+
+    console.log("DATA UNFORMAT", formData);
+
+    const submittedData = {
+      ...formData,
+      isConfirmed: formData?.isConfirmed === "YES" ? true : false,
+    };
+
+    console.log("DATA FORMAT", submittedData);
+
+    try {
+      const response = await fetch(
+        "https://us-central1-pacific-aurora-419610.cloudfunctions.net/wedding-backend/weddingConfirmation",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(submittedData),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const result = await response.json();
+      console.log("Success:", result);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+
     onClose();
   };
+
   //MAIN RENDER
   return (
     <ModalWrapper>

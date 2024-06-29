@@ -65,6 +65,7 @@ export const When = ({ onModalOpen }) => {
               <p>{translate("when.details.1")}</p>
               <p>{translate("when.details.2")}</p>
               <p>{translate("when.details.3")}</p>
+              <p>{translate("when.details.4")}</p>
             </TextDetails>
             <DetailsCards>
               <Ceremony>
