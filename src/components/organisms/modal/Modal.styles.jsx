@@ -1,5 +1,5 @@
+import { colors, contentW, sizes, spaces, zindex } from "@utils";
 import styled from "styled-components";
-import { zindex, colors, contentW, sizes, spaces } from "@utils";
 
 export const ModalWrapper = styled.div`
   position: fixed;
@@ -15,15 +15,24 @@ export const ModalWrapper = styled.div`
 `;
 
 export const ModalContent = styled.div`
+  position: relative;
+  overflow-y: scroll;
+  height: calc(100% - 2 * ${sizes.hg} - 2 * ${sizes.lg});
+  margin: ${sizes.lg} auto;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
   background: ${colors.white};
   padding: ${sizes.hg};
   border-radius: ${sizes.tiny};
-  position: relative;
-  min-width: ${contentW.tablet};
-
+  scrollbar-width: none;
+  & ::-webkit-scrollbar {
+    display: none;
+  }
   @media only screen and (max-width: ${contentW.tablet}) {
     width: 100%;
-    min-width: 0;
+    border-radius: 0;
+    height: calc(100% - 2 * ${sizes.hg});
   }
 `;
 

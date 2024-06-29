@@ -1,5 +1,5 @@
+import { contentW, sizes, spaces } from "@utils";
 import styled from "styled-components";
-import { spaces, contentW, sizes, colors } from "@utils";
 
 //MAIN CONTAINER
 export const MainContainer = styled.section`
@@ -30,7 +30,8 @@ export const IntroContainer = styled.div`
   flex-direction: column;
 
   p {
-    font-size: ${sizes.xl};
+    font-size: ${sizes.lg};
+    line-height: 1.7;
     margin: 0;
     padding: 0;
   }
@@ -86,7 +87,6 @@ export const Containers = styled.div`
   width: 100%;
   height: auto;
   gap: ${sizes.xll};
-
   @media only screen and (max-width: ${contentW.desktop}) {
     flex-direction: column;
     gap: 0;
@@ -97,7 +97,6 @@ export const Containers = styled.div`
 export const Img = styled.img`
   display: flex;
   width: ${sizes.super};
-
   @media only screen and (max-width: ${contentW.desktop}) {
     width: 100%;
   }
@@ -106,6 +105,8 @@ export const Img = styled.img`
 //DETAILS CONTAINER
 export const DetailsContainer = styled.div`
   width: 100%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
 `;
 
@@ -113,20 +114,20 @@ export const DetailsContainer = styled.div`
 export const TextDetails = styled.div`
   display: flex;
   flex-direction: column;
-  font-size: ${sizes.xl};
+  font-size: ${sizes.lg};
+  line-height: 1.7;
   text-align: center;
   width: 100%;
   height: auto;
   align-items: center;
-  padding-top: ${spaces.md};
-
   p {
-    margin: 0;
+    margin: 0 ${spaces.sm};
   }
-
   @media only screen and (max-width: ${contentW.desktop}) {
+    padding-top: ${spaces.xs};
     p {
       padding: 0 ${sizes.hg};
+      margin: 0;
     }
   }
   @media only screen and (max-width: ${contentW.mobile}) {
@@ -203,6 +204,7 @@ export const Ceremony = styled.div`
     .hour {
       font-size: ${sizes.md};
     }
+  }
 `;
 
 //RECEPTION

@@ -1,5 +1,5 @@
+import { colors, contentW, sizes, spaces } from "@utils";
 import styled from "styled-components";
-import { spaces, colors, contentW, sizes } from "@utils";
 
 export const MainContainer = styled.section`
   margin: 0 auto;
@@ -13,15 +13,15 @@ export const MainContainer = styled.section`
 
 export const InfoContainer = styled.div`
   display: flex;
-  padding: 0 ${spaces.sm};
-
+  padding: 0 ${spaces.lg};
   height: auto;
   text-align: center;
-  font-size: ${sizes.xl};
+  font-size: ${sizes.lg};
   justify-content: center;
   flex-direction: column;
 
   p {
+    line-height: 1.7;
     margin: 0;
   }
 

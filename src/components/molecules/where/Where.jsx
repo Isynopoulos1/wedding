@@ -1,11 +1,11 @@
 import React from "react";
-import { getTranslate } from "react-redux-translates";
 import { useSelector } from "react-redux";
+import { getTranslate } from "react-redux-translates";
 import {
-  MainContainer,
-  SectionWrapper,
   ImageContainer,
   InnerImage,
+  MainContainer,
+  SectionWrapper,
 } from "./Where.styles";
 
 //IMPORT COMPONENTS
@@ -21,7 +21,6 @@ const Where = () => {
       <SectionWrapper>
         <p className="title">{translate("where.text.1")}</p>
         <p>{translate("where.text.2")}</p>
-
         <a href="https://maps.app.goo.gl/bgR16fWZStxnXmBm6" target="_blank">
           <p className="link">{translate("where.text.3")}</p>
         </a>
