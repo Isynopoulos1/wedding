@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { getTranslate } from "react-redux-translates";
 import { useSelector } from "react-redux";
+import { getTranslate } from "react-redux-translates";
 
 import {
-  ModalWrapper,
-  ModalContent,
   CloseButton,
-  ModalHeader,
   Form,
+  ModalContent,
+  ModalHeader,
+  ModalWrapper,
 } from "./Modal.styles";
 //IMPORT COMPONENTS
 import SendBtn from "@atoms/sendBtn/SendBtn";
@@ -15,6 +15,7 @@ import SendBtn from "@atoms/sendBtn/SendBtn";
 const Modal = ({ onClose }) => {
   const translate = useSelector(state => getTranslate(state.localize));
   //HOOKS
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -33,15 +34,11 @@ const Modal = ({ onClose }) => {
   };
   const handleSubmit = async e => {
     e.preventDefault();
-
-    console.log("DATA UNFORMAT", formData);
-
+    setLoading(true);
     const submittedData = {
       ...formData,
       isConfirmed: formData?.isConfirmed === "YES" ? true : false,
     };
-
-    console.log("DATA FORMAT", submittedData);
 
     try {
       const response = await fetch(
@@ -56,13 +53,15 @@ const Modal = ({ onClose }) => {
       );
 
       if (!response.ok) {
+        setLoading(false);
         throw new Error("Network response was not ok");
       }
 
       const result = await response.json();
-      console.log("Success:", result);
+      setLoading(false);
     } catch (error) {
       console.error("Error:", error);
+      setLoading(false);
     }
 
     onClose();
@@ -149,7 +148,7 @@ const Modal = ({ onClose }) => {
             />
           </label>
           <br />
-          <SendBtn />
+          {!loading && <SendBtn />}
         </Form>
       </ModalContent>
     </ModalWrapper>
