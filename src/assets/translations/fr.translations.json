@@ -1,4 +1,7 @@
 {
+  "header.when": "Quand",
+  "header.where": "Où",
+  "header.how": "Comment",
   "confirm.button": "Confirmer la présence",
   "when.date": "Dimanche, 27 octobre 2024",
   "when.intro.1": "Deux origines, deux cultures, deux langues, mais un seul destin.",

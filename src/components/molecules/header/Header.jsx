@@ -1,24 +1,24 @@
-import React, { useState, useEffect } from "react";
+import { contentW } from "@utils";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { getTranslate } from "react-redux-translates";
-import { contentW } from "@utils";
 
 //IMPORT COMPONENTS
-import Logo from "@atoms/logo/desktop/DesktopLogo";
-import Link from "@atoms/link/Link";
 import BurguerMenu from "@atoms/burguerMenu/BurguerMenu";
 import ConfirmBtn from "@atoms/confirmBtn/ConfirmBtn";
+import Link from "@atoms/link/Link";
+import Logo from "@atoms/logo/desktop/DesktopLogo";
 
 //IMPORT STYLES
 import {
-  HeaderWrapper,
   HeaderContainer,
-  HeaderLeftContainer,
   HeaderContainerRight,
-  Line,
-  Nav,
+  HeaderLeftContainer,
+  HeaderWrapper,
   LanguagesNav,
+  Line,
   MobileMenuContainer,
+  Nav,
 } from "./Header.styles";
 
 //IMPORT ASSETS
@@ -77,9 +77,9 @@ const Header = ({ toggleModal, setActiveLanguage }) => {
   };
   //DATA
   const links = [
-    { label: "When", href: "when" },
-    { label: "Where", href: "where" },
-    { label: "How", href: "how" },
+    { label: translate("header.when"), href: "when" },
+    { label: translate("header.where"), href: "where" },
+    { label: translate("header.how"), href: "how" },
   ];
 
   //RENDER FUNCTIONS
@@ -106,7 +106,6 @@ const Header = ({ toggleModal, setActiveLanguage }) => {
               label={language.name}
               onClick={() => handleTranslation(language)}
             />
-
             {index < languages.length - 1 && <Line />}
           </React.Fragment>
         ))}
