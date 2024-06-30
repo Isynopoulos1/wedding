@@ -28,6 +28,10 @@ export const HeaderContainer = styled.div`
 
 export const Nav = styled.nav`
   display: flex;
+  align-items: center;
+  & > a {
+    padding: 0 ${sizes.xs};
+  }
   @media only screen and (max-width: ${contentW.tablet}) {
     flex-direction: column;
     font-size: ${sizes.hg};
@@ -37,7 +41,10 @@ export const Nav = styled.nav`
 `;
 export const LanguagesNav = styled.nav`
   display: flex;
-
+  & > a:not(:last-child):after {
+    content: "|";
+    padding: 0 ${sizes.xs};
+  }
   @media only screen and (max-width: ${contentW.tablet}) {
     display: flex;
     padding-top: ${spaces.sm};
@@ -53,17 +60,8 @@ export const HeaderLeftContainer = styled.div`
 export const HeaderContainerRight = styled.div`
   position: relative;
   display: flex;
+  align-items: center;
   gap: ${sizes.xl};
-  nav {
-    display: flex;
-  }
-`;
-
-export const Line = styled.div`
-  width: 1px;
-  height: calc(80% - 20px);
-  margin: auto;
-  background-color: ${colors.black};
 `;
 
 export const MobileMenuContainer = styled.div`
