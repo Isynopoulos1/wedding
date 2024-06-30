@@ -16,7 +16,6 @@ import {
   HeaderLeftContainer,
   HeaderWrapper,
   LanguagesNav,
-  Line,
   MobileMenuContainer,
   Nav,
 } from "./Header.styles";
@@ -101,13 +100,11 @@ const Header = ({ toggleModal, setActiveLanguage }) => {
     return (
       <LanguagesNav>
         {languages.map((language, index) => (
-          <React.Fragment key={language.name}>
-            <Link
-              label={language.name}
-              onClick={() => handleTranslation(language)}
-            />
-            {index < languages.length - 1 && <Line />}
-          </React.Fragment>
+          <Link
+            key={language.name}
+            label={language.name}
+            onClick={() => handleTranslation(language)}
+          />
         ))}
       </LanguagesNav>
     );

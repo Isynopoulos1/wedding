@@ -17,7 +17,7 @@ export const ModalWrapper = styled.div`
 export const ModalContent = styled.div`
   position: relative;
   overflow-y: scroll;
-  height: calc(100% - 2 * ${sizes.hg} - 2 * ${sizes.lg});
+  max-height: calc(100% - 2 * ${sizes.hg} - 2 * ${sizes.lg});
   margin: ${sizes.lg} auto;
   z-index: 1;
   display: flex;
@@ -36,7 +36,7 @@ export const ModalContent = styled.div`
   }
 `;
 
-export const CloseButton = styled.button`
+export const CloseButton = styled.div`
   position: absolute;
   top: ${sizes.xss};
   right: ${sizes.xss};
@@ -56,6 +56,7 @@ export const ModalHeader = styled.div`
   }
   p {
     font-size: ${sizes.xl};
+    padding-bottom: ${sizes.xl};
   }
 `;
 export const Form = styled.form`
@@ -66,9 +67,11 @@ export const Form = styled.form`
   input,
   select,
   textarea {
+    margin: 0;
+    padding: 0;
     padding: ${sizes.tiny};
-    font-size: ${sizes.ssm};
     margin-top: ${sizes.tiny};
+    font-size: ${sizes.ssm};
     border: 1px solid ${colors.minimal};
     padding: ${spaces.tiny} 0;
     transition: border-color 0.3s ease;
@@ -80,9 +83,20 @@ export const Form = styled.form`
   }
 
   label {
+    margin: 0;
+    padding: 0;
     font-size: ${sizes.ssm};
     display: flex;
     flex-direction: column;
     width: 100%;
+  }
+  input,
+  select,
+  textarea {
+    padding: ${sizes.xs};
+  }
+  button {
+    text-transform: uppercase;
+    font-weight: bold;
   }
 `;

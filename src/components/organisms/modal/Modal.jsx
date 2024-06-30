@@ -89,7 +89,6 @@ const Modal = ({ onClose }) => {
               required
             />
           </label>
-          <br />
           <label>
             {translate("modal.text.4")}
             <input
@@ -100,7 +99,6 @@ const Modal = ({ onClose }) => {
               required
             />
           </label>
-          <br />
           <label>
             {translate("modal.text.5")}
             <input
@@ -111,7 +109,6 @@ const Modal = ({ onClose }) => {
               required
             />
           </label>
-          <br />
           <label>
             {translate("modal.text.6")}
             <select
@@ -124,7 +121,6 @@ const Modal = ({ onClose }) => {
               <option value="NO">{translate("modal.text.8")}</option>
             </select>
           </label>
-          <br />
           <label>
             {translate("modal.text.9")}
             <select
@@ -137,7 +133,6 @@ const Modal = ({ onClose }) => {
               <option value="VEGAN">{translate("modal.text.12")}</option>
             </select>
           </label>
-          <br />
           <label>
             {translate("modal.text.13")}
             <textarea
@@ -147,7 +142,6 @@ const Modal = ({ onClose }) => {
               rows={4}
             />
           </label>
-          <br />
           {!loading && <SendBtn />}
         </Form>
       </ModalContent>

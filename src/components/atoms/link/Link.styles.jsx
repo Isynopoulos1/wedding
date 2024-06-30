@@ -1,13 +1,16 @@
 import styled from "styled-components";
-import { colors } from "@utils";
+import { colors, sizes } from "@utils";
 
 export const StyledLink = styled.a`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: ${colors.black};
   text-decoration: none;
-  padding: 10px 15px;
+  height: ${sizes.xl};
   transition: background-color 0.3s ease;
   cursor: pointer;
-
   &:hover {
     color: ${colors.silver};
   }

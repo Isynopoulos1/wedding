@@ -39,7 +39,6 @@ export const When = ({ onModalOpen }) => {
   return (
     <MainContainer>
       <HeroContainer id="hero" onClick={handleLogoClick}>
-        <Line />
         <Logo />
         <Line />
       </HeroContainer>
