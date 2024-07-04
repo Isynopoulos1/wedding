@@ -21,7 +21,7 @@ export const SectionWrapper = styled.div`
 
   p {
     margin: 0;
-    font-style: italic;
+    font-style: normal;
   }
 
   .link {

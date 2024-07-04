@@ -12,6 +12,7 @@ import When from "@molecules/when/When";
 import Where from "@molecules/where/Where";
 import How from "@molecules/how/How";
 import Modal from "@organisms/modal/Modal";
+import Accommodations from "@molecules/accommodations/Accommodations";
 
 const App = ({ addTranslationForLanguage, setActiveLanguage }) => {
   // USE ONCE
@@ -34,6 +35,7 @@ const App = ({ addTranslationForLanguage, setActiveLanguage }) => {
       <When onModalOpen={handleModal} />
       <Where />
       <How />
+      <Accommodations/>
       <Footer />
     </>
   );

@@ -176,7 +176,7 @@ export const Ceremony = styled.div`
 
   .hour {
     font-size: ${sizes.lg};
-    font-style: italic;
+    font-style: normal;
   }
 
   @media only screen and (max-width: ${contentW.desktop}) {
@@ -227,7 +227,7 @@ export const Reception = styled.div`
 
   .hour {
     font-size: ${sizes.lg};
-    font-style: italic;
+    font-style: normal;
   }
 
   @media only screen and (max-width: ${contentW.desktop}) {

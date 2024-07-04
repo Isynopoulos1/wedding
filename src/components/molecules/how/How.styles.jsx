@@ -70,7 +70,7 @@ export const Details = styled.div`
   }
 
   .hour {
-    font-style: italic;
+    font-style: normal;
   }
 
   @media only screen and (max-width: ${contentW.mobile}) {
@@ -104,7 +104,7 @@ export const Ceremony = styled.div`
   }
 
   .hour {
-    font-style: italic;
+    font-style: normal;
   }
 
   @media only screen and (max-width: ${contentW.mobile}) {
@@ -128,7 +128,7 @@ export const Bus = styled.div`
   }
 
   .hour {
-    font-style: italic;
+    font-style: normal;
   }
 
   .title {
