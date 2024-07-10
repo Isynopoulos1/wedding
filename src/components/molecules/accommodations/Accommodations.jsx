@@ -58,31 +58,20 @@ const Accommodations = () => {
       href: "https://www.airbnb.es/rooms/40560911?source_impression_id=p3_1720100830_P3AUokgQLt8A5ULe",
       name: "Hotel Aneto",
     },
+    {
+      href: "https://es.eveniahotels.com/ciudad/barcelona/evenia-rocafort?utm_source=Google+My+Business&utm_medium=Ficha&utm_campaign=Evenia+Rocafort",
+      name: "Evenia Rocafort",
+    },
 
     {
       href: "https://www.airbnb.es/rooms/979073?source_impression_id=p3_1720100859_P3uXrbi7L4xnm-RR",
       name: "Departamento en Gracia",
     },
     {
-      href: "https://www.airbnb.es/rooms/52144534?source_impression_id=p3_1720100887_P3rTwSXnTx7o9_SI",
-      name: "Habitación Eixample",
-    },
-    {
-      href: "https://www.airbnb.es/rooms/1128749157139423981?source_impression_id=p3_1720100920_P33eeWdDgAZLkDMY",
-      name: "Habitación en Eixample",
-    },
-    {
       href: "https://www.airbnb.es/rooms/39741313?source_impression_id=p3_1720100954_P32lPA-vuCsCNB-g",
       name: "Habitación en Barceloneta",
     },
-    {
-      href: "https://www.airbnb.es/rooms/862939512331509310?source_impression_id=p3_1720100977_P3doT1px0UyJlQK6",
-      name: "Departamento Sant Pau",
-    },
-    {
-      href: "https://www.airbnb.es/rooms/14006090?source_impression_id=p3_1720101027_P3rdj1eLm6_KLJw_",
-      name: "Estudio Céntrico",
-    },
+
     {
       href: "https://www.airbnb.es/rooms/708574105207333740?source_impression_id=p3_1720101069_P3N7nt3RDRLC5Tmc",
       name: "Habitación Céntrica",
