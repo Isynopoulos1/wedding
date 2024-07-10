@@ -10,41 +10,58 @@ const Accommodations = () => {
 
   const accommodations = [
     { href: "https://hostalbedmates.com/", name: "Hostal Bedmates" },
-    { href: "https://www.hostalsans.com/es", name: "Hostal Sans" },
+    {
+      href: "https://www.leonardo-hotels.es/barcelona/leonardo-hotel-barcelona-gran-via?utm_source=gmb&utm_medium=link_site_gmb&utm_campaign=leonardo-hotel-barcelona-gran-via",
+      name: "Leonardo Hotel",
+    },
+    {
+      href: "https://www.hotelparalel.com/es",
+      name: "Hotel Paralel",
+    },
+
     {
       href: "https://www.spanish.hostelworld.com/pwa/wds/hosteldetails.php/Diagonal-House/Barcelona/88042?from=2024-10-25&to=2024-10-28&guests=2&origin=microsite",
       name: "Diagonal House Hostel",
     },
+
     {
-      href: "http://www.hostalsantaanna.com/",
-      name: "Hostal Santa Ana",
-    },
-    {
-      href: "https://es.hoteles.com/ho684856544/pension-arosa-barcelona-barcelona-espana/",
-      name: "Pensión Arosa",
-    },
-    { href: "https://www.lapalmerabcn.com/", name: "Hostal La Palmera" },
-    {
-      href: "https://hostalportugal.com/",
-      name: "Hostal Portugal",
-    },
-    {
-      href: "https://valesuites.com/es/",
-      name: "Vale Suites",
+      href: "https://hotels.cloudbeds.com/es/reservation/W8ulcX?currency=eur",
+      name: "Mambo Tango",
     },
     { href: "https://www.hotel-chi.com/", name: "Hotel Chi" },
+    { href: "https://www.hostalsans.com/es", name: "Hostal Sans" },
     {
       href: "https://www.airbnb.es/rooms/53469118?source_impression_id=p3_1720100794_P3t3zeuVHtc-vaGg",
       name: "Chic&Basic Velvet",
     },
     {
-      href: "https://www.airbnb.es/rooms/40560911?source_impression_id=p3_1720100830_P3AUokgQLt8A5ULe",
-      name: "Hotel Aneto",
+      href: "https://valesuites.com/es/",
+      name: "Vale Suites",
     },
     {
       href: "https://www.safestay.com/es/venue/safestay-barcelona-passeig-de-gracia/",
       name: "Safestay",
     },
+    { href: "https://www.lapalmerabcn.com/", name: "Hostal La Palmera" },
+    {
+      href: "https://es.hoteles.com/ho684856544/pension-arosa-barcelona-barcelona-espana/",
+      name: "Pensión Arosa",
+    },
+    {
+      href: "https://www.cityhotels.es/atenea-calabria-apartaments/",
+      name: "Atenea Calabria Apartments",
+    },
+
+    {
+      href: "https://hostalportugal.com/",
+      name: "Hostal Portugal",
+    },
+
+    {
+      href: "https://www.airbnb.es/rooms/40560911?source_impression_id=p3_1720100830_P3AUokgQLt8A5ULe",
+      name: "Hotel Aneto",
+    },
+
     {
       href: "https://www.airbnb.es/rooms/979073?source_impression_id=p3_1720100859_P3uXrbi7L4xnm-RR",
       name: "Departamento en Gracia",
