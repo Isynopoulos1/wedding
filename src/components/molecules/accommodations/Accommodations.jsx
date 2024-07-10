@@ -18,12 +18,10 @@ const Accommodations = () => {
       href: "https://www.hotelparalel.com/es",
       name: "Hotel Paralel",
     },
-
     {
       href: "https://www.spanish.hostelworld.com/pwa/wds/hosteldetails.php/Diagonal-House/Barcelona/88042?from=2024-10-25&to=2024-10-28&guests=2&origin=microsite",
       name: "Diagonal House Hostel",
     },
-
     {
       href: "https://hotels.cloudbeds.com/es/reservation/W8ulcX?currency=eur",
       name: "Mambo Tango",
@@ -51,7 +49,6 @@ const Accommodations = () => {
       href: "https://www.cityhotels.es/atenea-calabria-apartaments/",
       name: "Atenea Calabria Apartments",
     },
-
     {
       href: "https://hostalportugal.com/",
       name: "Hostal Portugal",
