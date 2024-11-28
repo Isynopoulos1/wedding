@@ -149,7 +149,8 @@ const Gallery = () => {
      {images.map((image, index) => (
       //TODO to add modal hook
      <GalleryItem key={index}>
-      <GalleryImage src={image} alt={`Foto ${index + 1}`}/>
+      <GalleryImage 
+        src={`${image}?f-auto`} alt={`Foto ${index + 1}`} loading="lazy"/>
      </GalleryItem>
      ) )}
       <Line />

@@ -76,9 +76,7 @@ const Header = ({ toggleModal, setActiveLanguage }) => {
   };
   //DATA
   const links = [
-    { label: translate("header.when"), href: "when" },
-    { label: translate("header.where"), href: "where" },
-    { label: translate("header.how"), href: "how" },
+    { label: translate("header.thanks"), href: "thanks" },
     { label: translate("header.gallery"), href: "gallery" }
   ];
 

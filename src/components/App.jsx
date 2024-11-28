@@ -8,12 +8,10 @@ import { GlobalStyles } from "./App.styles";
 //IMPORT COMPONENTS
 import Footer from "@molecules/footer/Footer";
 import Header from "@molecules/header/Header";
-import When from "@molecules/when/When";
-import Where from "@molecules/where/Where";
-import How from "@molecules/how/How";
+import Thanks from "@molecules/thanks/Thanks";
 import Gallery from "@molecules/gallery/Gallery";
 import Modal from "@organisms/modal/Modal";
-import Accommodations from "@molecules/accommodations/Accommodations";
+
 
 const App = ({ addTranslationForLanguage, setActiveLanguage }) => {
   // USE ONCE
@@ -33,11 +31,8 @@ const App = ({ addTranslationForLanguage, setActiveLanguage }) => {
       <GlobalStyles />
       {isModalOpen && <Modal onClose={handleModal} />}
       <Header setActiveLanguage={setActiveLanguage} toggleModal={handleModal} />
-      <When onModalOpen={handleModal} />
-      <Where />
-      <How />
+      <Thanks onModalOpen={handleModal} />
       <Gallery/>
-      <Accommodations/>
       <Footer />
     </>
   );
