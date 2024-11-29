@@ -15,6 +15,7 @@ export const MainContainer = styled.section`
 export const GalleryItem = styled.div`
   width: 300px;
   height: 300px;
+  object-fit: cover;
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease;

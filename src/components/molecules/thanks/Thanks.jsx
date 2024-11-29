@@ -13,12 +13,13 @@ const Thanks = () => {
   const translate = useSelector(state => getTranslate(state.localize));
   return (
     <MainContainer id="thanks">
+          <Line />
       <InfoContainer>
         <p>{translate("thanks.text.1")}</p>
         <p>{translate("thanks.text.2")}</p>
         <p>{translate("thanks.text.3")}</p>
       </InfoContainer>
-      
+      <Line />
     </MainContainer>
   );
 };
