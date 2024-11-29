@@ -1,14 +1,24 @@
-import React from 'react'
+
+import React, { useState } from "react";
 //IMPORT STYLES
 import {
   MainContainer,
   GalleryItem,
-  GalleryImage
+  GalleryImage,
+  FullScreenModal,
+  FullScreenImage,
+  CloseButton
 } from "./Gallery.styles";
 //IMPORT COMPONENTS
 import Line from "@atoms/line/Line";
 
 const Gallery = () => {
+
+  // //HOOKS
+  const [open, setOpen] = useState (false);
+  const [selectedImage, setSelectedImage] = useState (null);
+
+  //IMAGES ARRAY
   const images = [
     'https://ik.imagekit.io/ppayaz/iselalarcon/isela&erwan/wedding-pics/DSCF0715_wyQ_R8myJ.jpg',
     'https://ik.imagekit.io/ppayaz/iselalarcon/isela&erwan/wedding-pics/DSCF0172_hsT_mfBc3.jpg',
@@ -141,17 +151,37 @@ const Gallery = () => {
     'https://ik.imagekit.io/ppayaz/iselalarcon/isela&erwan/wedding-pics/DSCF2455_iKMHqKEwV.jpg',
     'https://ik.imagekit.io/ppayaz/iselalarcon/isela&erwan/wedding-pics/DSCF2567_CbMOhPp8iN.jpg',
     'https://ik.imagekit.io/ppayaz/iselalarcon/isela&erwan/wedding-pics/DSCF2555_9_GTFYquE.jpg',
+    'https://ik.imagekit.io/ppayaz/iselalarcon/isela&erwan/wedding-pics/DSCF2419_6NB6snpmi.jpg'
   
-  ]
+  ];
+
+  //HANDLE IMAGE CLICK
+const handleClick = (image) => {
+  setSelectedImage(image);
+  setOpen(true);
+};
+// HANDLE MODAL CLOSE
+const handleClose = (image) => {
+  setSelectedImage(null);
+  setOpen(false);
+}
+
   return (
     <MainContainer id="gallery">
      {images.map((image, index) => (
-      //TODO to add modal hook
-     <GalleryItem key={index}>
+     <GalleryItem key={index} onClick={() => handleClick(image)}>
       <GalleryImage 
         src={`${image}?tr=w-300,h-300,q-60,f-auto`} alt={`Foto ${index + 1}`} loading="lazy"/>
      </GalleryItem>
-     ) )}
+     ))}
+      {/* Fullscreen Modal */}
+      {open && (
+        <FullScreenModal onClick={handleClose}>
+          <CloseButton onClick={handleClose}> <span className="material-symbols-outlined">close_small</span></CloseButton>
+          <FullScreenImage src={selectedImage} alt="Selected" />
+        </FullScreenModal>
+      )}
+
       <Line />
     </MainContainer>
     
