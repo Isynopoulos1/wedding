@@ -3,7 +3,7 @@ export const sizes = {
   xss: "10px",
   xs: "12px",
   sm: "14px",
-  ssm: "16px",
+  ssm: "17px",
   md: "20px",
   lg: "24px",
   xl: "32px",

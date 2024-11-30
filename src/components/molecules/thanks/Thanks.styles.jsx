@@ -25,7 +25,7 @@ export const InfoContainer = styled.div`
     line-height: 1.7;
     margin: 0;
     font-size: ${sizes.xl};
-    margin-top: 50px;
+    margin-top: ${sizes.hg};
   }
 
   @media only screen and (max-width: ${contentW.desktop}) {

@@ -1,4 +1,4 @@
-import { contentW } from "@utils";
+import { contentW, sizes } from "@utils";
 import styled from "styled-components";
 
 //MAIN CONTAINER
@@ -7,14 +7,14 @@ export const MainContainer = styled.section`
   width: 100%;
   max-width: ${contentW.desktop};
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 15px;   
+  gap: ${sizes.ssm};
 `;
 //GALLERY CONTAINER
 export const GalleryItem = styled.div`
-  width: 300px;
-  height: 300px;
+  width: ${sizes.xxxxl};
+  height: ${sizes.xxxxl};
   object-fit: cover;
   overflow: hidden;
   cursor: pointer;
@@ -29,7 +29,6 @@ export const GalleryImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  
 `;
 //FULLSCREEN MODAL
 export const FullScreenModal = styled.div`
@@ -52,11 +51,11 @@ export const FullScreenImage = styled.img`
 
 export const CloseButton = styled.button`
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: ${sizes.md};
+  right: ${sizes.md};
   background: none;
   border: none;
   color: white;
-  font-size: 24px;
+  font-size: ${sizes.lg};
   cursor: pointer;
 `;
