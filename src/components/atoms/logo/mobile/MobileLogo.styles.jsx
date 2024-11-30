@@ -7,7 +7,6 @@ export const StyledLogo = styled.svg`
   width: ${sizes.super};
   margin: 0;
   z-index: ${zindex.base};
-  margin-top: ${spaces.md};
 
   @media only screen and (max-width: 700px) {
     width: ${sizes.xxxxl};

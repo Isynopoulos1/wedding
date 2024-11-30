@@ -8,34 +8,21 @@ import { GlobalStyles } from "./App.styles";
 //IMPORT COMPONENTS
 import Footer from "@molecules/footer/Footer";
 import Header from "@molecules/header/Header";
-import When from "@molecules/when/When";
-import Where from "@molecules/where/Where";
-import How from "@molecules/how/How";
-import Modal from "@organisms/modal/Modal";
-import Accommodations from "@molecules/accommodations/Accommodations";
+import Thanks from "@molecules/thanks/Thanks";
+import Gallery from "@molecules/gallery/Gallery";
 
 const App = ({ addTranslationForLanguage, setActiveLanguage }) => {
   // USE ONCE
   useEffect(() => {
     activateTranslations(addTranslationForLanguage);
   }, []);
-  //HOOKS
-  const [isModalOpen, setModalOpen] = useState(false);
-
-  //HANDLE FUNCTIONS
-  const handleModal = () => {
-    return setModalOpen(!isModalOpen);
-  };
 
   return (
     <>
       <GlobalStyles />
-      {isModalOpen && <Modal onClose={handleModal} />}
-      <Header setActiveLanguage={setActiveLanguage} toggleModal={handleModal} />
-      <When onModalOpen={handleModal} />
-      <Where />
-      <How />
-      <Accommodations/>
+      <Header setActiveLanguage={setActiveLanguage} />
+      <Thanks />
+      <Gallery />
       <Footer />
     </>
   );
