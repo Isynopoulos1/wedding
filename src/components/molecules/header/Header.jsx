@@ -5,7 +5,6 @@ import { getTranslate } from "react-redux-translates";
 
 //IMPORT COMPONENTS
 import BurguerMenu from "@atoms/burguerMenu/BurguerMenu";
-import ConfirmBtn from "@atoms/confirmBtn/ConfirmBtn";
 import Link from "@atoms/link/Link";
 import Logo from "@atoms/logo/desktop/DesktopLogo";
 
@@ -23,7 +22,7 @@ import {
 //IMPORT ASSETS
 import { languages } from "@utils";
 
-const Header = ({ toggleModal, setActiveLanguage }) => {
+const Header = ({ setActiveLanguage }) => {
   //HOOKS
   const [isMobile, setIsMobile] = useState(false);
   const [toggle, setToggle] = useState(false);
@@ -77,7 +76,7 @@ const Header = ({ toggleModal, setActiveLanguage }) => {
   //DATA
   const links = [
     { label: translate("header.thanks"), href: "thanks" },
-    { label: translate("header.gallery"), href: "gallery" }
+    { label: translate("header.gallery"), href: "gallery" },
   ];
 
   //RENDER FUNCTIONS
@@ -118,17 +117,13 @@ const Header = ({ toggleModal, setActiveLanguage }) => {
           {!isMobile && renderLinks()}
         </HeaderLeftContainer>
         {!isMobile && (
-          <HeaderContainerRight>
-            {renderLanguages()}
-            <ConfirmBtn onClick={toggleModal} />
-          </HeaderContainerRight>
+          <HeaderContainerRight>{renderLanguages()}</HeaderContainerRight>
         )}
         {isMobile && <BurguerMenu onClick={handleToggle} active={toggle} />}
       </HeaderContainer>
       {isMobile && toggle && (
         <MobileMenuContainer>
           {renderLinks()}
-          <ConfirmBtn onClick={toggleModal} />
           {renderLanguages()}
         </MobileMenuContainer>
       )}

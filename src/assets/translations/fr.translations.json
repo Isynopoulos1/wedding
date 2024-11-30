@@ -1,30 +1,6 @@
 {
   "header.thanks": "Merci",
   "header.gallery": "Galerie",
-  "confirm.button": "Confirmer la présence",
-  "thanks.text.1": "Le mariage aura lieu le dimanche 27 octobre au Castell de Tous, à Barcelone.",
-  "thanks.text.2": "Un service de transport privé partira de l'Av. Reina Maria Cristina, juste en face des Tours Vénitiennes à Barcelone.",
-  "thanks.text.3": "Si vous choisissez de conduire, un parking sera disponible au Castell de Tous.",
-  "thanks.text.4": "BUS PRIVÉ",
-  "thanks.text.5": "Heure de rendez-vous : 11h45",
-  "thanks.text.6": "Départ du bus : 12h00",
-  "thanks.text.7": "Point de rendez-vous",
-  "thanks.text.8": "CÉRÉMONIE",
-  "thanks.text.9": "14:00h",
-  "thanks.text.10": "Castell de Tous, Barcelone",
-  "modal.text.1": "CONFIRMER LA PRÉSENCE",
-  "modal.text.2": "Veuillez confirmer d'ici le 1er août 2024.",
-  "modal.text.3": "Prénom",
-  "modal.text.4": "Nom de famille",
-  "modal.text.5": "E-mail",
-  "modal.text.6": "Comptez-vous assister?",
-  "modal.text.7": "Oui",
-  "modal.text.8": "Non",
-  "modal.text.9": "Sélectionnez votre type de régime alimentaire",
-  "modal.text.10": "Menu régulier",
-  "modal.text.11": "Sans gluten",
-  "modal.text.12": "Végétalien",
-  "modal.text.13": "Autre",
-  "modal.send.btn": "Envoyer"
-
+  "thanks.text.1": "Merci d’avoir partagé ce jour si spécial avec nous",
+  "thanks.text.2": "ISELA & ERWAN"
 }

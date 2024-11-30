@@ -1,30 +1,6 @@
 {
   "header.thanks": "Thanks",
   "header.gallery": "Gallery",
-  "confirm.button": "Confirm Attendance",
-  "thanks.text.1": "The wedding will take place on Sunday, October 27th, at Castell de Tous, Barcelona.",
-  "thanks.text.2": "A private transportation service will depart from Av. Reina Maria Cristina, directly in front of the Venetian Towers in Barcelona.",
-  "thanks.text.3": "If you choose to drive, there will be parking available at Castell de Tous.",
-  "thanks.text.4": "PRIVATE BUS",
-  "thanks.text.5": "Meeting Time: 11:45h",
-  "thanks.text.6": "Bus Departure: 12:00h",
-  "thanks.text.7": "Meeting Point",
-  "thanks.text.8": "CEREMONY",
-  "thanks.text.9": "14:00h ",
-  "thanks.text.10": "Castell de Tous, Barcelone",
-  "modal.text.1": "CONFIRM ATTENDANCE",
-  "modal.text.2": "Please confirm by August 1st, 2024.",
-  "modal.text.3": "First Name",
-  "modal.text.4": "Last Name",
-  "modal.text.5": "E-mail",
-  "modal.text.6": "Will you attend?",
-  "modal.text.7": "Yes",
-  "modal.text.8": "No",
-  "modal.text.9": "Select your dietary type",
-  "modal.text.10": "Regular menu",
-  "modal.text.11": "Gluten free",
-  "modal.text.12": "Vegan",
-  "modal.text.13": "Other",
-  "modal.send.btn": "Send"
-
+  "thanks.text.1": "Thank you for celebrating our special day with us",
+  "thanks.text.2": "ISELA & ERWAN"
 }

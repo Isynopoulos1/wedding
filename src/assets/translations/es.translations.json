@@ -1,30 +1,6 @@
 {
   "header.thanks": "Gracias",
   "header.gallery": "Galería",
-  "confirm.button": "Confirmar asistencia",
-  "thanks.text.1": "La boda tendrá lugar el domingo 27 de octubre en el Castell de Tous, Barcelona.",
-  "thanks.text.2": "Un servicio de transporte privado saldrá desde la Av. Reina María Cristina, justo frente a las Torres Venecianas en Barcelona.",
-  "thanks.text.3": "Si decides conducir, habrá estacionamiento disponible en el Castell de Tous.",
-  "thanks.text.4": "AUTOBÚS PRIVADO",
-  "thanks.text.5": "Hora de encuentro: 11:45h",
-  "thanks.text.6": "Salida del autobús: 12:00h",
-  "thanks.text.7": "Punto de encuentro",
-  "thanks.text.8": "CEREMONIA",
-  "thanks.text.9": "14:00h ",
-  "thanks.text.10": "Castell de Tous, Barcelona",
-  "modal.text.1": "CONFIRMAR ASISTENCIA",
-  "modal.text.2": "Por favor confirma antes del 1 de agosto de 2024.",
-  "modal.text.3": "Nombre",
-  "modal.text.4": "Apellido",
-  "modal.text.5": "Correo electrónico",
-  "modal.text.6": "¿Asistirás?",
-  "modal.text.7": "Sí",
-  "modal.text.8": "No",
-  "modal.text.9": "Selecciona tu tipo de dieta",
-  "modal.text.10": "Menú normal",
-  "modal.text.11": "Libre de gluten",
-  "modal.text.12": "Vegano",
-  "modal.text.13": "Otro",
-  "modal.send.btn": "Enviar"
-
+  "thanks.text.1": "Gracias por ser parte de este día tan especial",
+  "thanks.text.2": "ISELA & ERWAN"
 }

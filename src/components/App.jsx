@@ -10,7 +10,7 @@ import Footer from "@molecules/footer/Footer";
 import Header from "@molecules/header/Header";
 import Thanks from "@molecules/thanks/Thanks";
 import Gallery from "@molecules/gallery/Gallery";
-import Modal from "@organisms/modal/Modal";
+// import Modal from "@organisms/modal/Modal";
 
 
 const App = ({ addTranslationForLanguage, setActiveLanguage }) => {
@@ -19,19 +19,21 @@ const App = ({ addTranslationForLanguage, setActiveLanguage }) => {
     activateTranslations(addTranslationForLanguage);
   }, []);
   //HOOKS
-  const [isModalOpen, setModalOpen] = useState(false);
+  // const [isModalOpen, setModalOpen] = useState(false);
 
   //HANDLE FUNCTIONS
-  const handleModal = () => {
-    return setModalOpen(!isModalOpen);
-  };
+  // const handleModal = () => {
+  //   return setModalOpen(!isModalOpen);
+  // };
 
   return (
     <>
       <GlobalStyles />
-      {isModalOpen && <Modal onClose={handleModal} />}
-      <Header setActiveLanguage={setActiveLanguage} toggleModal={handleModal} />
-      <Thanks onModalOpen={handleModal} />
+      {/* {isModalOpen && <Modal onClose={handleModal} />} */}
+      {/* <Header setActiveLanguage={setActiveLanguage} toggleModal={handleModal} /> */}
+      <Header setActiveLanguage={setActiveLanguage}  />
+      {/* <Thanks onModalOpen={handleModal} /> */}
+      <Thanks />
       <Gallery/>
       <Footer />
     </>

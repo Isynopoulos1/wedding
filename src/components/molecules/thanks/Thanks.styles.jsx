@@ -19,10 +19,13 @@ export const InfoContainer = styled.div`
   font-size: ${sizes.lg};
   justify-content: center;
   flex-direction: column;
+  align-items: center;
 
   p {
     line-height: 1.7;
     margin: 0;
+    font-size: ${sizes.xl};
+    margin-top: 50px;
   }
 
   @media only screen and (max-width: ${contentW.desktop}) {
